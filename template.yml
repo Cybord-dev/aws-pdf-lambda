@@ -9,7 +9,7 @@ Resources:
   pdfFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: target/java17-examples-1.0-SNAPSHOT.jar
+      CodeUri: target/ppt-pdf-lambda-1.0.0-shaded.jar
       Handler: com.business.unknown.APIHandler
       Runtime: java17
       Description: Java function
