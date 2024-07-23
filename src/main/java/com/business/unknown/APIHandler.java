@@ -33,7 +33,8 @@ public class APIHandler implements RequestStreamHandler {
             }
 
             JSONObject responseBody = new JSONObject();
-            responseBody.put("message", "lambda example automatic deploy with github actions");
+            responseBody.put("message", "Automatic deploy with github actions");
+            responseBody.put("change", "example deploy change");
 
             JSONObject headerJson = new JSONObject();
             headerJson.put("test", " my test header");
