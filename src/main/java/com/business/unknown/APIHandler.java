@@ -1,7 +1,6 @@
 package com.business.unknown;
 
 import com.amazonaws.services.lambda.runtime.Context;
-import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -33,7 +32,7 @@ public class APIHandler implements RequestStreamHandler {
             }
 
             JSONObject responseBody = new JSONObject();
-            responseBody.put("message", "Automatic deploy with github actions");
+            responseBody.put("message", "version 1.0.1");
             responseBody.put("change", "example deploy change");
 
             JSONObject headerJson = new JSONObject();

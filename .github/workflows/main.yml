@@ -31,4 +31,4 @@ jobs:
 
       - name: Deploy to Lambda
         run: |
-          aws lambda update-function-code --function-name ppt-pdf-lambda --zip-file fileb://target/ppt-pdf-lambda-1.0.0.jar
+          aws lambda update-function-code --function-name ppt-pdf-lambda --zip-file fileb://target/ppt-pdf-lambda-1.0.1.jar
