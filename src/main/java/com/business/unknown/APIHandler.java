@@ -27,7 +27,7 @@ public class APIHandler implements RequestStreamHandler {
 
     private PDFBuilder pdfBuilder = new PDFBuilder();
     @Override
-    public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
+    public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context)  {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         JSONObject responseJson = new JSONObject();
@@ -57,10 +57,9 @@ public class APIHandler implements RequestStreamHandler {
         } catch (ParseException pex) {
             responseJson.put("statusCode", 400);
             responseJson.put("exception", pex);
+        } catch (IOException ex){
+            responseJson.put("statusCode", 500);
+            responseJson.put("exception", ex);
         }
-
-        OutputStreamWriter writer = new OutputStreamWriter(outputStream, "UTF-8");
-        writer.write(responseJson.toString());
-        writer.close();
     }
 }
