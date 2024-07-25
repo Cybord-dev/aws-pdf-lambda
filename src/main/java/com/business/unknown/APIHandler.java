@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 
 public class APIHandler implements RequestStreamHandler {
@@ -27,7 +28,7 @@ public class APIHandler implements RequestStreamHandler {
 
     private PDFBuilder pdfBuilder = new PDFBuilder();
     @Override
-    public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context)  {
+    public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         JSONObject responseJson = new JSONObject();
@@ -47,12 +48,14 @@ public class APIHandler implements RequestStreamHandler {
                 body.put("message", "base64 PDF generated");
             }
 
-
+            System.out.println("staring JSON response creation");
             JSONObject headerJson = new JSONObject();
             headerJson.put("Content-Type", "application/json");
             responseJson.put("statusCode", 200);
             responseJson.put("headers", headerJson);
-            responseJson.put("body", body.toJSONString());
+            String bodyString = body.toJSONString();
+            responseJson.put("body", bodyString);
+            System.out.println("body created"+bodyString);
 
         } catch (ParseException pex) {
             responseJson.put("statusCode", 400);
@@ -61,5 +64,9 @@ public class APIHandler implements RequestStreamHandler {
             responseJson.put("statusCode", 500);
             responseJson.put("exception", ex);
         }
+
+        OutputStreamWriter writer = new OutputStreamWriter(outputStream, "UTF-8");
+        writer.write(responseJson.toString());
+        writer.close();
     }
 }
