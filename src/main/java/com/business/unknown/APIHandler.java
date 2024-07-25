@@ -3,6 +3,7 @@ package com.business.unknown;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.business.unknown.utils.HtmlConverter;
+import com.business.unknown.utils.PDFBuilder;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -23,6 +24,8 @@ public class APIHandler implements RequestStreamHandler {
     private JSONParser parser = new JSONParser();
 
     private HtmlConverter htmlConverter = new HtmlConverter();
+
+    private PDFBuilder pdfBuilder = new PDFBuilder();
     @Override
     public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
 
@@ -31,21 +34,25 @@ public class APIHandler implements RequestStreamHandler {
         try {
             JSONObject event = (JSONObject) parser.parse(reader);
 
-            String bodyResponse = "<h1>NO RESPONSE</h1>";
+            JSONObject body = new JSONObject();
+            body.put("message", "NO PDF builded");
 
             if (event.get("body") != null) {
                 logger.info("BODY: "+event.get("body").toString());
                 org.thymeleaf.context.Context ctx = new org.thymeleaf.context.Context();
                 ctx.setVariable("name", event.get("body").toString());
                 ctx.setVariable("date", LocalDate.now().toString());
-                bodyResponse = htmlConverter.buildHtml(ctx);
-            }
-            JSONObject headerJson = new JSONObject();
-            headerJson.put("Content-Type", "text/html; charset=UTF-8");
 
+                body.put("pdf",pdfBuilder.buildPdf(htmlConverter.buildHtml(ctx)));
+                body.put("message", "base64 PDF generated");
+            }
+
+
+            JSONObject headerJson = new JSONObject();
+            headerJson.put("Content-Type", "application/json");
             responseJson.put("statusCode", 200);
             responseJson.put("headers", headerJson);
-            responseJson.put("body", bodyResponse);
+            responseJson.put("body", body.toJSONString());
 
         } catch (ParseException pex) {
             responseJson.put("statusCode", 400);
