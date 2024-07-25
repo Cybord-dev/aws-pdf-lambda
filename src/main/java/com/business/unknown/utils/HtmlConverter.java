@@ -20,8 +20,6 @@ public class HtmlConverter {
     }
 
     public String buildHtml(Context context){
-        var result = templateEngine.process("index", context);
-        System.out.println(result);
-        return result;
+        return templateEngine.process("index", context);
     }
 }
