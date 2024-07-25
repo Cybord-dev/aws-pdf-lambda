@@ -38,7 +38,7 @@ public class APIHandler implements RequestStreamHandler {
                 org.thymeleaf.context.Context ctx = new org.thymeleaf.context.Context();
                 ctx.setVariable("name", event.get("body").toString());
                 ctx.setVariable("date", LocalDate.now().toString());
-                htmlConverter.buildHtml(ctx);
+                bodyResponse = htmlConverter.buildHtml(ctx);
             }
             JSONObject headerJson = new JSONObject();
             headerJson.put("Content-Type", "text/html; charset=UTF-8");
