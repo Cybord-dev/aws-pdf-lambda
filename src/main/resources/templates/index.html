@@ -2,12 +2,29 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Sample Thymeleaf template</title>
+    <title>PDF invoice</title>
+    <style>
+        .center_div {
+            border: 1px solid gray;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            background-color: #d0f0f6;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
 
-<p th:text="|Hello, ${name}!|">Hello, user!</p>
-<p th:text="|Today is ${date}.|">Today is ...</p>
-
+<div class="center_div">
+    <h1>Hello TEST PDF</h1>
+    <div class="myclass bg-red">
+        <p>This is the tutorial to convert html to pdf.</p>
+        <p th:text="|${name}!|">Hello, user!</p>
+        <p th:text="|Today is ${date}.|">Today is ...</p>
+    </div>
+</div>
 </body>
 </html>
