@@ -2,7 +2,9 @@ package com.business.unknown;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
+import com.business.unknown.model.FacturaCustom;
 import com.business.unknown.utils.PDFBuilder;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -22,6 +24,8 @@ public class APIHandler implements RequestStreamHandler {
     private static final Logger logger = LoggerFactory.getLogger(APIHandler.class);
     private JSONParser parser = new JSONParser();
     private PDFBuilder pdfBuilder = new PDFBuilder();
+
+    private ObjectMapper objMapper = new ObjectMapper();
     @Override
     public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
 
@@ -34,10 +38,11 @@ public class APIHandler implements RequestStreamHandler {
             body.put("message", "NO PDF builded");
 
             if (event.get("body") != null) {
-                System.out.println(event.get("body").toString());
-                logger.info("BODY: "+event.get("body").toString());
+                String bodyString = event.get("body").toString();
+                FacturaCustom invoice = objMapper.readValue(bodyString, FacturaCustom.class);
+                System.out.println(invoice.toString());
                 org.thymeleaf.context.Context ctx = new org.thymeleaf.context.Context();
-                ctx.setVariable("name", event.get("body").toString());
+                ctx.setVariable("name", invoice.toString());
                 ctx.setVariable("date", LocalDate.now().toString());
 
                 body.put("pdf",pdfBuilder.buildPdf(ctx));
