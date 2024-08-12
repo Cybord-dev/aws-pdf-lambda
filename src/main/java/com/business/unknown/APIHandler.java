@@ -43,8 +43,7 @@ public class APIHandler implements RequestStreamHandler {
                 FacturaCustom invoice = objMapper.readValue(bodyString, FacturaCustom.class);
                 System.out.println(invoice.toString());
                 org.thymeleaf.context.Context ctx = new org.thymeleaf.context.Context();
-                ctx.setVariable("name", invoice.toString());
-                ctx.setVariable("date", LocalDate.now().toString());
+                ctx.setVariable("invoice", invoice);
 
                 body.put("pdf",new String(Base64.getEncoder().encode(pdfBuilder.buildPdf(ctx))));
                 body.put("message", "base64 PDF generated");

@@ -1,90 +1,205 @@
 {
-  "id": 124126,
+  "id": 123953,
   "version": "4.0",
-  "rfcEmisor": "OHA180426U22",
-  "rfcRemitente": "AGE2112158F4",
-  "razonSocialEmisor": "OPERADORA DE HARDWARE & SOFTWARE RAMA, S.A. DE C.V.",
-  "lineaEmisor": "B",
-  "razonSocialRemitente": "ABASTECEDORA GEMCO, S.A. DE C.V.",
-  "lineaRemitente": "A",
+  "rfcEmisor": "ZIN180416LMA",
+  "rfcRemitente": "GASK8809154Z9",
+  "razonSocialEmisor": "ZENIBA INTERNACIONAL",
+  "lineaEmisor": "A",
+  "razonSocialRemitente": "KARINA VIRIDIANA GARCIA SORIANO",
+  "lineaRemitente": "CLIENTE",
   "tipoDocumento": "Factura",
-  "solicitante": "c1107@semmeljack.com",
-  "folio": "202408090722210531",
-  "preFolio": "0824-01027",
-  "uuid": "A7285B87-C43D-4C08-B9FB-BAD8414E21BE",
+  "solicitante": "erik10cd@gmail.com",
+  "folio": "202408080627011015",
+  "preFolio": "0824-00854",
+  "uuid": "A22211CB-993A-4371-840B-1835DC8FD711",
   "statusFactura": 3,
   "statusDetail": "",
   "packFacturacion": "NTLINK",
   "metodoPago": "PUE",
   "impuestosRetenidos": 0,
-  "impuestosTrasladados": 34960.06,
-  "fechaCreacion": "2024-08-09T13:32:00",
-  "fechaActualizacion": "2024-08-09T19:32:04",
-  "fechaTimbrado": "2024-08-09T13:32:00",
-  "selloCfd": "zP/oXg==",
-  "total": 253460.46,
-  "saldoPendiente": 253460.46,
-  "validacionTeso": false,
-  "validacionOper": false,
-  "qr": "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",
-  "cadenaOriginal": "||1.1|A7285B87-C43D-4C08-B9FB-BAD8414E21BE|2024-08-09T18:32:00|NLC091211KC6|C1ilhGXyxLd2iB7flpgjRlgQUyXxj/1mNQ/7dE7EqBNPUJZ8KBrJbmp6dm9y5cCOUjY1EZxwG4NiaFg0YYT07kQxVSbMu39CvNn9mggvcKICcRHWA2aYq3Y2NFYM0wnzRQIDXinZ9WpIDUH3AMk83g824i9UdPk60Ani/sFYN74nBvHlRt1r3Mr8JLEYx8wVHrG2diSlB89dgTlldml0UKMjwhHoRaSUrhHaB4oOJY7uCr47YHq5Btqf09ki17z77XMNfeYu9ei0d9UEpWBgrSuUq7LtzCK9tjgwlTdgQIwqqKCRG6oiVz6rSr6xJLtxWCMuPO3Ah5G0z0c6zP/oXg==|00001000000708142518||",
-  "totalDesc": "Doscientos Cincuenta y Tres Mil Cuatrocientos Sesenta Pesos Cuarenta y Seis  Centavos",
-  "subTotalDesc": "Doscientos DieciOcho Mil Quinientos Pesos Cuatro  Centavos",
-  "usoCfdiDesc": "Adquisición de mercancias",
+  "impuestosTrasladados": 12551.72,
+  "fechaCreacion": "2024-08-09T09:06:13",
+  "fechaActualizacion": "2024-08-09T15:06:20",
+  "fechaTimbrado": "2024-08-09T09:06:13",
+  "selloCfd": "H7rs3Q==",
+  "total": 91000,
+  "saldoPendiente": 0,
+  "validacionTeso": true,
+  "validacionOper": true,
+  "qr": "iVBORw0KGgoAAAANSUhEUgAAAHIAAAByCAYAAACP3YV9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAsUSURBVHhe7ZHbaiTbDgTn/396Hwo6jIilbKmq7YdjHJAUedHqGfzvvz9+BX9/yF/C3x/yl/D3h/wlHH/If//+PVKi21aZ1Nsnph190sS0d552QH9X5ki6o40S3bbKpN4+Me3okyamvfO0A/q7MkeShon4sHK8tWW6c49g8oZ+EiRvmZQn4juv7xff9rByvLVlunOPYPKGfhIkb5mUJ+I7r+8XHuItSN45OK/bmoPzuq05TPldwZSDPWxzvAX2cCTp0ILknYPzuq05OK/bmsOU3xVMOdjDNsdbYA9Hkg4tSN75RNpv3/Eu+UkT233abb0F9nAk6dCC5J1PpP32He+SnzSx3afd1ltgD0eSDi146qfcgq3/VKbbXIIpT6S9BfZwJOnQgqd+yi3Y+k9lus0lmPJE2ltgD0eShgnvk0+52ebbnXH/6d7efNqbtD+STx9OPuVmm293xv2ne3vzaW/S/kgY3hX8+Wf+rsyRdEcbwZ9/5u/KnMmHdD9aBcknbZn22/e8w6cc6uadvptvf7H7R1dB8klbpv32Pe/wKYe6eafv5njRP1R//J22fNd+yn9aJuVQb+vOedLEsfBhfeydtnzXfsp/WiblUG/rznnSxLFIDzhHiW57KeF+2gO7JLCHtNvmxjtknH+8e32/YOgD5yjRbS8l3E97YJcE9pB229x4h4zzj3ev7214MD4c+pSbtLNPTDv3+CSYfCLtnOOdT+yXYvrB1KfcpJ19Ytq5xyfB5BNp5xzvfOJYbh+62ydvQdddgp/KLZNyqLdVJuXgfty/vl9wMB7e7JO3oOsuwU/llkk51Nsqk3JwP+5f3zU8aEHyzhPeTR7I3dtD3XY9eGclph68S94y8y+J7tFLkLzzhHeTB3L39lC3XQ/eWYmpB++St8yRdEeXJrybPKTdJEj+br5lu2dnTUy71B8JQ2vCu8lD2k2C5O/mW7Z7dtbEtEv9kTBMgq57p0TaJZ9ySH6bwzafPJAnwZQnjqY+0gm67p0SaZd8yiH5bQ7bfPJAngRTnjia8WDZp13Kwf20B3aW6TadwD5Rb+ve3tSbzS5xNB8/+OrTLuXgftoDO8t0m05gn6i3dW9v6s1ml4jNdAhPd+mOfCuYcpg8kCeBPdRt7e1NvemUiM10CE936Y58K5hymDyQJ4E91G3t7U296ZQ4mnS49XdzmDykXcqhbjYCe0i7uznUTZdPHIv6WH1g6+/mMHlIu5RD3WwE9pB2d3Oomy6fOBbTQ/gkSD7lT6lv3nln2rvHJ23x/q5PHIvpIXwSJJ/yp9Q377wz7d3jk7Z4f9cn4oIH1g9pl+7Ik8Ae6vadtnhf36ja0t1uZFKeiMv6I5sHvUt35ElgD3X7Tlu8r29UbeluNzIpT8Tl9ANJYA9TnnpwX2/e5Qgmb+gtsDf1psqkHOLd63sQD155EtjDlKce3NebdzmCyRt6C+xNvakyKYd49/oexIOQA/1Wiae9c/yn+RbfW2C/Jd3Fl+JByIF+q8TT3jn+03yL7y2w35LujoRhkuk2VdB1nRLd9pJ52jt/KtNtLsHkIeVwNBwkmW5TBV3XKdFtL5mnvfOnMt3mEkweUg5Hw4G15e4e0p1zfFKi21aBvUk9+ad9ot52uyPxAdpydw/pzjk+KdFtq8DepJ780z5Rb7vdkaQD55NMt6ky3aYq0W07QcqN+3pTZbrNRpByczTp0Pkk022qTLepSnTbTpBy477eVJlusxGk3OTmhR8YHxx6YOf9Np+U6LZVW7b7+nZVIu1SDuO/xIfpIZh6YOf9Np+U6LZVW7b7+nZVIu1SDut/eXroqU8yqU8+5TB5ILdM6u1h2tlvWV/wA/6hpz7JpD75lMPkgdwyqbeHaWe/5biYHrrb4y2Yckg+KeG+3tQcnNdtFXTdJbA39abuUg5HkoZwt8dbMOWQfFLCfb2pOTiv2yrouktgb+pN3aUc8osv/MBWE97V2y43afdUE91NJ+i6TwT2MP4P6mN3NOFdve1yk3ZPNdHddIKu+0RgD0dSj6u2dLeXTLepgpTDtofkUw6TB3ILuq6TGfvX9wsfoC3d7SXTbaog5bDtIfmUw+SB3IKu62TG/vU98EF9ZCOYcrA32z25ZVJu6htVMOUm5Ybdev/6HviB+uhGMOVgb7Z7csuk3NQ3qmDKTcoNu/X+9f1iOqyPf8fOpH19q1Mi9c7xk6DrOkHyFthPHMvpAfrv2pm0r291SqTeOX4SdF0nSN4C+4n1Mv1QEqQcpjxporu5dBff1bdqbra9ZaYeciP8UH28E6Qcpjxporu5dBff1bdqbra9ZaYecvNiegDGH3r1P7WzJqZd6qc8CbquUyL1+eLF9DBMO/qf2lkT0y71U54EXdcpkfoj8RDvHJxP3tCnnfsk020uGefJTwJ7U2+6XertzdGkB5yD88kb+rRzn2S6zSXjPPlJYG/qTbdLvb2JzXiofvIT7JO2bPf17Xfa0t1eguTv5onYjIfqJz/BPmnLdl/ffqct3e0lSP5unohNfaw+4NwCe1NvqsAe6rbrwX3yzhNpbw91W/spT4z963vAoR9wboG9qTdVYA912/XgPnnnibS3h7qt/ZQnxv71jaQHtjneOaTeOTLd5hJ0XSfjvG5rPvHpfvIw/kI8XOZ455B658h0m0vQdZ2M87qt+cSn+8nDkTC0IHkL7KFua+8cQcrBefLOYcrvCuwT9bbu7c3R1EeqIHkL7KFua+8cQcrBefLOYcrvCuwT9bbu7c3R1EfqoXME9qbeVME2RxPepbtpZw/k7qfcpJ3ziWOZHnKOwN7UmyrY5mjCu3Q37eyB3P2Um7RzPnEs0wP18donP+VJxnnd1hxSbw9TPmki7eobVU85LtOD9cdqn/yUJxnndVtzSL09TPmkibSrb1Q95bhMD6cc3FsTaW+fSDvySRPTrr7VCexNvakCeziSelwPUg7urYm0t0+kHfmkiWlX3+oE9qbeVIE9HEk9rgfOLZPyifrmRgn39aYKkp9yy9zNDbtpfzTp0LllUj5R39wo4b7eVEHyU26Zu7lhN+1js30AvKu3XW6mHd55Yrt3f9dD2llm6mHaxcvp0HhXb7vcTDu888R27/6uh7SzzNTDtMuXIj5QHq+CrqsyqXeOTLd5J5g8kKceUl9vnyiRG5Eeqj9SBV1XZVLvHJlu804weSBPPaS+3j5RIjcP8Q/Wf0SXQ910OSRvJdxPHsitRLetSqRdyiG/+BD/UP3xLoe66XJI3kq4nzyQW4luW5VIu5TDkfhgKzPlluk2l4zzrU+5qdt3PdTtnRzstxwXPHRXZsot020uGedbn3JTt+96qNs7OdhvOS7uPuQ9/qlgmyOwN/Wmykz51EPdViWmXcxf3y/SMOE9/qlgmyOwN/Wmykz51EPdViWmXcxf3y88xFuQfMpN3VZB112C5D+V2faJevtEYA9Hkg4tSD7lpm6roOsuQfKfymz7RL19IrCHI0mHFkweyN1PeSLtnUPqk59yBMlvc5jy2L++X3hYj6tg8kDufsoTae8cUp/8lCNIfpvDlMf+9f3Cw3pcBXc9TDv8Ngf3FiS/zSHlxrvkLUg5HImH9bgK7nqYdvhtDu4tSH6bQ8qNd8lbkHI4kjRMTHv6uzsLphzsE+y2Mt3mEiSf8sTYv75fTAdm/IFXf3dnwZSDfYLdVqbbXILkU54Y+9f3Cw7uCrruEnTdRmAPdVv7uzl8Vw7bu8knjgWHdwVddwm6biOwh7qt/d0cviuH7d3kE/Pij/8L/v6Qv4S/P+Qv4e8P+Sv477//ARl1UQsprH1gAAAAAElFTkSuQmCC",
+  "cadenaOriginal": "||1.1|A22211CB-993A-4371-840B-1835DC8FD711|2024-08-09T14:06:14|NLC091211KC6|SIf9kzLpb81lzbS9lT13J132ElQ+i0DEibcc+h6fHwHPvGyubgxGeM80IjX5xhkVReNJWurv25rTtE9pmDZLQysnNTyuF1pGCNd1SwmQ52NKIkIk3N/XvLpT+MHllqv33HrRXea6HgyoX1xTNxLBqMFKPARNOQaQhFds/PbyopAgpKEi0leJg/xkImhUgEAKeB0LPKlrHodofHbKTLExWLooQRdxnBaOn6stUkX+NW7Yp0oZKaoNK/EW8ArY+BClu805nFRpOMpnV/Y+3XgXwJWO2aWZ2G5M0DtOxNd6ulXJ94JReFaJSMVo3/8GtPg4y/P3HtyqruhsIpwqH7rs3Q==|00001000000708142518||",
+  "totalDesc": "Noventa y Un Mil Pesos Cero  Centavos",
+  "subTotalDesc": "Setenta y Ocho Mil Cuatrocientos Cuarenta y Ocho Pesos VeintiOcho  Centavos",
+  "usoCfdiDesc": "Gastos en general",
   "regimenFiscalDesc": "Régimen Simplificado de Confianza",
-  "regimenFiscalReceptorDesc": "Régimen Simplificado de Confianza",
+  "regimenFiscalReceptorDesc": "Personas Físicas con Actividades Empresariales y Profesionales",
   "formaPagoDesc": "Transferencia electrónica de fondos",
   "metodoPagoDesc": "PAGO EN UNA SOLA EXHIBICION",
-  "direccionEmisor": "AVENIDA (AV.) INSURGENTES SUR 216,402,ROMA NORTE,CUAUHTEMOC,CIUDAD DE MÉXICO,C.P. 06700",
-  "direccionReceptor": "CALLE 16 A 60,DEPTO 1,SANTA ROSA,GUSTAVO A. MADERO,CIUDAD DE MÉXICO,C.P. 07620",
+  "direccionEmisor": "AVENIDA (AV.) UNIVERSIDAD 716,401,BENITO JUAREZ,CIUDAD DE MEXICO,C.P. 03650",
+  "direccionReceptor": "CALLE CAFETAL 679 ,,GRANJAS MÉXICO,IZTACALCO,CIUDAD DE MÉXICO,C.P. 08400",
   "tipoDeComprobanteDesc": "Ingreso",
   "cfdi": {
     "version": "4.0",
-    "folio": "202408090722210531",
-    "fecha": "2024-08-09T18:32:00",
-    "sello": "C1ilhGXyxLd2iB7flpgjRlgQUyXxj/1mNQ/7dE7EqBNPUJZ8KBrJbmp6dm9y5cCOUjY1EZxwG4NiaFg0YYT07kQxVSbMu39CvNn9mggvcKICcRHWA2aYq3Y2NFYM0wnzRQIDXinZ9WpIDUH3AMk83g824i9UdPk60Ani/sFYN74nBvHlRt1r3Mr8JLEYx8wVHrG2diSlB89dgTlldml0UKMjwhHoRaSUrhHaB4oOJY7uCr47YHq5Btqf09ki17z77XMNfeYu9ei0d9UEpWBgrSuUq7LtzCK9tjgwlTdgQIwqqKCRG6oiVz6rSr6xJLtxWCMuPO3Ah5G0z0c6zP/oXg==",
+    "folio": "202408080627011015",
+    "fecha": "2024-08-09T14:06:13",
+    "sello": "SIf9kzLpb81lzbS9lT13J132ElQ+i0DEibcc+h6fHwHPvGyubgxGeM80IjX5xhkVReNJWurv25rTtE9pmDZLQysnNTyuF1pGCNd1SwmQ52NKIkIk3N/XvLpT+MHllqv33HrRXea6HgyoX1xTNxLBqMFKPARNOQaQhFds/PbyopAgpKEi0leJg/xkImhUgEAKeB0LPKlrHodofHbKTLExWLooQRdxnBaOn6stUkX+NW7Yp0oZKaoNK/EW8ArY+BClu805nFRpOMpnV/Y+3XgXwJWO2aWZ2G5M0DtOxNd6ulXJ94JReFaJSMVo3/8GtPg4y/P3HtyqruhsIpwqH7rs3Q==",
     "formaPago": "03",
     "metodoPago": "PUE",
-    "noCertificado": "00001000000513044025",
-    "certificado": "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",
-    "subtotal": 218500.4,
-    "total": 253460.46,
+    "noCertificado": "00001000000512584163",
+    "certificado": "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",
+    "subtotal": 78448.28,
+    "total": 91000,
     "moneda": "MXN",
     "tipoCambio": 1,
     "tipoDeComprobante": "I",
     "exportacion": "01",
-    "lugarExpedicion": "06700",
+    "lugarExpedicion": "03650",
     "emisor": {
-      "rfc": "OHA180426U22",
-      "nombre": "OPERADORA DE HARDWARE & SOFTWARE RAMA",
+      "rfc": "ZIN180416LMA",
+      "nombre": "ZENIBA INTERNACIONAL",
       "regimenFiscal": "626"
     },
     "receptor": {
-      "rfc": "AGE2112158F4",
-      "nombre": "ABASTECEDORA GEMCO",
-      "domicilioFiscalReceptor": "07620",
-      "regimenFiscalReceptor": "626",
-      "usoCfdi": "G01"
+      "rfc": "GASK8809154Z9",
+      "nombre": "KARINA VIRIDIANA GARCIA SORIANO",
+      "domicilioFiscalReceptor": "08400",
+      "regimenFiscalReceptor": "612",
+      "usoCfdi": "G03"
     },
     "conceptos": [
       {
-        "claveProdServ": "39121004",
-        "cantidad": 124,
+        "claveProdServ": "53101600",
+        "cantidad": 270,
         "claveUnidad": "H87",
-        "unidad": "PIEZA",
-        "descripcion": "FUENTE DE ENERGIA DELL OPTIPLEX 7010",
-        "valorUnitario": 1762.1,
-        "importe": 218500.4,
+        "unidad": "Pieza",
+        "descripcion": "BLUSAS ESTILO 194001 ",
+        "valorUnitario": 90,
+        "importe": 24300,
         "objetoImp": "02",
         "impuestos": [
           {
             "traslados": [
               {
-                "base": 218500.4,
+                "base": 24300,
                 "impuesto": "002",
                 "tipoFactor": "Tasa",
                 "tasaOCuota": 0.16,
-                "importe": 34960.064
+                "importe": 3888
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "53102000",
+        "cantidad": 208,
+        "claveUnidad": "H87",
+        "unidad": "Pieza",
+        "descripcion": "VESTIDOS ESTILO 14011 ",
+        "valorUnitario": 130,
+        "importe": 27040,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 27040,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 4326.4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "53101600",
+        "cantidad": 140,
+        "claveUnidad": "H87",
+        "unidad": "Pieza",
+        "descripcion": "BLUSAS ESTILO 196048 ",
+        "valorUnitario": 70,
+        "importe": 9800,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 9800,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 1568
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "53101600",
+        "cantidad": 119,
+        "claveUnidad": "H87",
+        "unidad": "Pieza",
+        "descripcion": "BLUSAS ESTILO 196248 ",
+        "valorUnitario": 70,
+        "importe": 8330,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 8330,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 1332.8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "53101600",
+        "cantidad": 99,
+        "claveUnidad": "H87",
+        "unidad": "Pieza",
+        "descripcion": "BLUSAS ESTILO 196235 ",
+        "valorUnitario": 41.1495,
+        "importe": 4073.8005,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 4073.8005,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 651.80808
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "53101600",
+        "cantidad": 87,
+        "claveUnidad": "H87",
+        "unidad": "Pieza",
+        "descripcion": "BLUSAS ESTILO 196238 ",
+        "valorUnitario": 56.37328,
+        "importe": 4904.47536,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 4904.47536,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 784.716058
               }
             ]
           }
@@ -95,30 +210,30 @@
       {
         "traslados": [
           {
-            "base": 218500.4,
+            "base": 78448.28,
             "impuesto": "002",
             "tipoFactor": "Tasa",
             "tasaOCuota": 0.16,
-            "importe": 34960.06
+            "importe": 12551.72
           }
         ],
-        "totalImpuestosTrasladados": 34960.06,
+        "totalImpuestosTrasladados": 12551.72,
         "totalImpuestosRetenidos": 0
       }
     ],
     "complemento": [
       {
         "version": "1.1",
-        "uuid": "A7285B87-C43D-4C08-B9FB-BAD8414E21BE",
-        "fechaTimbrado": "2024-08-09T18:32:00",
-        "selloCFD": "C1ilhGXyxLd2iB7flpgjRlgQUyXxj/1mNQ/7dE7EqBNPUJZ8KBrJbmp6dm9y5cCOUjY1EZxwG4NiaFg0YYT07kQxVSbMu39CvNn9mggvcKICcRHWA2aYq3Y2NFYM0wnzRQIDXinZ9WpIDUH3AMk83g824i9UdPk60Ani/sFYN74nBvHlRt1r3Mr8JLEYx8wVHrG2diSlB89dgTlldml0UKMjwhHoRaSUrhHaB4oOJY7uCr47YHq5Btqf09ki17z77XMNfeYu9ei0d9UEpWBgrSuUq7LtzCK9tjgwlTdgQIwqqKCRG6oiVz6rSr6xJLtxWCMuPO3Ah5G0z0c6zP/oXg==",
+        "uuid": "A22211CB-993A-4371-840B-1835DC8FD711",
+        "fechaTimbrado": "2024-08-09T14:06:14",
+        "selloCFD": "SIf9kzLpb81lzbS9lT13J132ElQ+i0DEibcc+h6fHwHPvGyubgxGeM80IjX5xhkVReNJWurv25rTtE9pmDZLQysnNTyuF1pGCNd1SwmQ52NKIkIk3N/XvLpT+MHllqv33HrRXea6HgyoX1xTNxLBqMFKPARNOQaQhFds/PbyopAgpKEi0leJg/xkImhUgEAKeB0LPKlrHodofHbKTLExWLooQRdxnBaOn6stUkX+NW7Yp0oZKaoNK/EW8ArY+BClu805nFRpOMpnV/Y+3XgXwJWO2aWZ2G5M0DtOxNd6ulXJ94JReFaJSMVo3/8GtPg4y/P3HtyqruhsIpwqH7rs3Q==",
         "rfcProvCertif": "NLC091211KC6",
-        "selloSAT": "VYEUZfc4hmgtLaHi+EToJR3XeO4GjuIaWTi1CUYHtLn40A1JEC8bJxUw2Xr2zegpoYk+rzCKFb3TpZPArdQs9UKJMMpouwgvaCDkmgVJnAWFsROI1vBPO1LXiEOZ//HWc43JssvOnC17apJ+8IMFzJ9INQ63PE15sPMX83azgSXdaFE7YdF0xtoxQi1G9aZC3Mn3BkZjzcyJu/ZXqdEXKBlxwWen0N1z6spbDLXiFr+t0o0knqzb+r8ym1MnkLC1J+LbpWKLC5mdXaPxqbb9Wogz9dX9O26I2HvyKGOwiLfwP2jVL0UnOc0tzKnzcdd/rVFqywcQnffkRA3O2RrQqQ==",
+        "selloSAT": "qkbGoC/cS7qlszfAEhlgaJSWQYZVPZIC5Evuje4B0CCxN+IbFsGzOHnw0A8TvmWOsex2Aa1mnuxoOhG8LaoTCqPLFjuEt0yZFMrl/DkH6w49VS/4/3pIX7HZXma1FI58eqNi6MksIO/bamwNIq5Icm865cJOXC3oka793vhhNgk6/F3XBynevIAf/zg9hFlJBhaSJiQAdwmB2dnzwEuCQEGdNpumVoivMjk4Z1BUbNPp/AEQ8K2ZKjcgt0BV+mhpHtL2AEZP6/GYor3z5L6CnK/7qZWJDytMIl1tmhfIo1kJQPsFM3PluHX7jzjMxj+v/C/26f045QHt5/Z3jcVgng==",
         "noCertificadoSAT": "00001000000708142518"
       }
     ],
     "addenda": []
   },
-  "selloSat": "C1ilhGXyxLd2iB7flpgjRlgQUyXxj/1mNQ/7dE7EqBNPUJZ8KBrJbmp6dm9y5cCOUjY1EZxwG4NiaFg0YYT07kQxVSbMu39CvNn9mggvcKICcRHWA2aYq3Y2NFYM0wnzRQIDXinZ9WpIDUH3AMk83g824i9UdPk60Ani/sFYN74nBvHlRt1r3Mr8JLEYx8wVHrG2diSlB89dgTlldml0UKMjwhHoRaSUrhHaB4oOJY7uCr47YHq5Btqf09ki17z77XMNfeYu9ei0d9UEpWBgrSuUq7LtzCK9tjgwlTdgQIwqqKCRG6oiVz6rSr6xJLtxWCMuPO3Ah5G0z0c6zP/oXg==",
+  "selloSat": "SIf9kzLpb81lzbS9lT13J132ElQ+i0DEibcc+h6fHwHPvGyubgxGeM80IjX5xhkVReNJWurv25rTtE9pmDZLQysnNTyuF1pGCNd1SwmQ52NKIkIk3N/XvLpT+MHllqv33HrRXea6HgyoX1xTNxLBqMFKPARNOQaQhFds/PbyopAgpKEi0leJg/xkImhUgEAKeB0LPKlrHodofHbKTLExWLooQRdxnBaOn6stUkX+NW7Yp0oZKaoNK/EW8ArY+BClu805nFRpOMpnV/Y+3XgXwJWO2aWZ2G5M0DtOxNd6ulXJ94JReFaJSMVo3/8GtPg4y/P3HtyqruhsIpwqH7rs3Q==",
   "pagos": []
 }
