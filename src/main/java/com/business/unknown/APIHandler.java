@@ -2,7 +2,6 @@ package com.business.unknown;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
-import com.business.unknown.utils.HtmlConverter;
 import com.business.unknown.utils.PDFBuilder;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -16,16 +15,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 
 public class APIHandler implements RequestStreamHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(APIHandler.class);
     private JSONParser parser = new JSONParser();
-
-    private HtmlConverter htmlConverter = new HtmlConverter();
-
     private PDFBuilder pdfBuilder = new PDFBuilder();
     @Override
     public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
@@ -39,12 +34,13 @@ public class APIHandler implements RequestStreamHandler {
             body.put("message", "NO PDF builded");
 
             if (event.get("body") != null) {
+                System.out.println(event.get("body").toString());
                 logger.info("BODY: "+event.get("body").toString());
                 org.thymeleaf.context.Context ctx = new org.thymeleaf.context.Context();
                 ctx.setVariable("name", event.get("body").toString());
                 ctx.setVariable("date", LocalDate.now().toString());
 
-                body.put("pdf",pdfBuilder.buildPdf(htmlConverter.buildHtml(ctx)));
+                body.put("pdf",pdfBuilder.buildPdf(ctx));
                 body.put("message", "base64 PDF generated");
             }
 
