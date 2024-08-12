@@ -18,6 +18,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.time.LocalDate;
+import java.util.Base64;
 
 public class APIHandler implements RequestStreamHandler {
 
@@ -45,7 +46,7 @@ public class APIHandler implements RequestStreamHandler {
                 ctx.setVariable("name", invoice.toString());
                 ctx.setVariable("date", LocalDate.now().toString());
 
-                body.put("pdf",pdfBuilder.buildPdf(ctx));
+                body.put("pdf",new String(Base64.getEncoder().encode(pdfBuilder.buildPdf(ctx))));
                 body.put("message", "base64 PDF generated");
             }
 

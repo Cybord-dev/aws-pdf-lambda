@@ -1,0 +1,124 @@
+{
+  "id": 124126,
+  "version": "4.0",
+  "rfcEmisor": "OHA180426U22",
+  "rfcRemitente": "AGE2112158F4",
+  "razonSocialEmisor": "OPERADORA DE HARDWARE & SOFTWARE RAMA, S.A. DE C.V.",
+  "lineaEmisor": "B",
+  "razonSocialRemitente": "ABASTECEDORA GEMCO, S.A. DE C.V.",
+  "lineaRemitente": "A",
+  "tipoDocumento": "Factura",
+  "solicitante": "c1107@semmeljack.com",
+  "folio": "202408090722210531",
+  "preFolio": "0824-01027",
+  "uuid": "A7285B87-C43D-4C08-B9FB-BAD8414E21BE",
+  "statusFactura": 3,
+  "statusDetail": "",
+  "packFacturacion": "NTLINK",
+  "metodoPago": "PUE",
+  "impuestosRetenidos": 0,
+  "impuestosTrasladados": 34960.06,
+  "fechaCreacion": "2024-08-09T13:32:00",
+  "fechaActualizacion": "2024-08-09T19:32:04",
+  "fechaTimbrado": "2024-08-09T13:32:00",
+  "selloCfd": "zP/oXg==",
+  "total": 253460.46,
+  "saldoPendiente": 253460.46,
+  "validacionTeso": false,
+  "validacionOper": false,
+  "qr": "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",
+  "cadenaOriginal": "||1.1|A7285B87-C43D-4C08-B9FB-BAD8414E21BE|2024-08-09T18:32:00|NLC091211KC6|C1ilhGXyxLd2iB7flpgjRlgQUyXxj/1mNQ/7dE7EqBNPUJZ8KBrJbmp6dm9y5cCOUjY1EZxwG4NiaFg0YYT07kQxVSbMu39CvNn9mggvcKICcRHWA2aYq3Y2NFYM0wnzRQIDXinZ9WpIDUH3AMk83g824i9UdPk60Ani/sFYN74nBvHlRt1r3Mr8JLEYx8wVHrG2diSlB89dgTlldml0UKMjwhHoRaSUrhHaB4oOJY7uCr47YHq5Btqf09ki17z77XMNfeYu9ei0d9UEpWBgrSuUq7LtzCK9tjgwlTdgQIwqqKCRG6oiVz6rSr6xJLtxWCMuPO3Ah5G0z0c6zP/oXg==|00001000000708142518||",
+  "totalDesc": "Doscientos Cincuenta y Tres Mil Cuatrocientos Sesenta Pesos Cuarenta y Seis  Centavos",
+  "subTotalDesc": "Doscientos DieciOcho Mil Quinientos Pesos Cuatro  Centavos",
+  "usoCfdiDesc": "Adquisición de mercancias",
+  "regimenFiscalDesc": "Régimen Simplificado de Confianza",
+  "regimenFiscalReceptorDesc": "Régimen Simplificado de Confianza",
+  "formaPagoDesc": "Transferencia electrónica de fondos",
+  "metodoPagoDesc": "PAGO EN UNA SOLA EXHIBICION",
+  "direccionEmisor": "AVENIDA (AV.) INSURGENTES SUR 216,402,ROMA NORTE,CUAUHTEMOC,CIUDAD DE MÉXICO,C.P. 06700",
+  "direccionReceptor": "CALLE 16 A 60,DEPTO 1,SANTA ROSA,GUSTAVO A. MADERO,CIUDAD DE MÉXICO,C.P. 07620",
+  "tipoDeComprobanteDesc": "Ingreso",
+  "cfdi": {
+    "version": "4.0",
+    "folio": "202408090722210531",
+    "fecha": "2024-08-09T18:32:00",
+    "sello": "C1ilhGXyxLd2iB7flpgjRlgQUyXxj/1mNQ/7dE7EqBNPUJZ8KBrJbmp6dm9y5cCOUjY1EZxwG4NiaFg0YYT07kQxVSbMu39CvNn9mggvcKICcRHWA2aYq3Y2NFYM0wnzRQIDXinZ9WpIDUH3AMk83g824i9UdPk60Ani/sFYN74nBvHlRt1r3Mr8JLEYx8wVHrG2diSlB89dgTlldml0UKMjwhHoRaSUrhHaB4oOJY7uCr47YHq5Btqf09ki17z77XMNfeYu9ei0d9UEpWBgrSuUq7LtzCK9tjgwlTdgQIwqqKCRG6oiVz6rSr6xJLtxWCMuPO3Ah5G0z0c6zP/oXg==",
+    "formaPago": "03",
+    "metodoPago": "PUE",
+    "noCertificado": "00001000000513044025",
+    "certificado": "MIIGQzCCBCugAwIBAgIUMDAwMDEwMDAwMDA1MTMwNDQwMjUwDQYJKoZIhvcNAQELBQAwggGEMSAwHgYDVQQDDBdBVVRPUklEQUQgQ0VSVElGSUNBRE9SQTEuMCwGA1UECgwlU0VSVklDSU8gREUgQURNSU5JU1RSQUNJT04gVFJJQlVUQVJJQTEaMBgGA1UECwwRU0FULUlFUyBBdXRob3JpdHkxKjAoBgkqhkiG9w0BCQEWG2NvbnRhY3RvLnRlY25pY29Ac2F0LmdvYi5teDEmMCQGA1UECQwdQVYuIEhJREFMR08gNzcsIENPTC4gR1VFUlJFUk8xDjAMBgNVBBEMBTA2MzAwMQswCQYDVQQGEwJNWDEZMBcGA1UECAwQQ0lVREFEIERFIE1FWElDTzETMBEGA1UEBwwKQ1VBVUhURU1PQzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMVwwWgYJKoZIhvcNAQkCE01yZXNwb25zYWJsZTogQURNSU5JU1RSQUNJT04gQ0VOVFJBTCBERSBTRVJWSUNJT1MgVFJJQlVUQVJJT1MgQUwgQ09OVFJJQlVZRU5URTAeFw0yMjA1MTgyMTQxNDFaFw0yNjA1MTgyMTQxNDFaMIIBEDE3MDUGA1UEAxQuT1BFUkFET1JBIERFIEhBUkRXQVJFICYgU09GVFdBUkUgUkFNQSBTQSBERSBDVjE3MDUGA1UEKRQuT1BFUkFET1JBIERFIEhBUkRXQVJFICYgU09GVFdBUkUgUkFNQSBTQSBERSBDVjE3MDUGA1UEChQuT1BFUkFET1JBIERFIEhBUkRXQVJFICYgU09GVFdBUkUgUkFNQSBTQSBERSBDVjElMCMGA1UELRMcT0hBMTgwNDI2VTIyIC8gVklHSjgzMTEwN0pBOTEeMBwGA1UEBRMVIC8gVklHSjgzMTEwN0hNQ0xSTDA4MRwwGgYDVQQLExNSQU1BIFNFTExPIFJFTk9WQURPMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8cDRtKZChMd17UYk4wA7oMclXPr/oYowj3HZhMjREDo/WmwiDrqEnS/vsUaoaJ/v+yhcT0EGbzPFB8POr0UIYqmePD5IvdJJ1IZG9F9GJhBL7PRHAws3JCSfmzhzB0usL+jO3A1LdEa1634xe1z7Ad4oNbAIEifCwSR/NyWDBoMXki/tSB8BeelnadlvbB8+gdBiPZLyWYT1VcR4EPeEZSlTkD6qtxDQCk8goDbO+IKxTMaJer72dlxy1sK6wYm4x/yEv9IIHXOd/G7e923VW1W/OeutxAhS4/uHL2RBSY/cVTjf1DEDjwYSCu2vwj+1NtFPuUA1+m9DbfEGcOH/VQIDAQABox0wGzAMBgNVHRMBAf8EAjAAMAsGA1UdDwQEAwIGwDANBgkqhkiG9w0BAQsFAAOCAgEAD3nfrX8XNNienO982uJUuy2gJqstKQuRWmL8LnS2YAwrFM4NGvo2qkdW6mwlBQTRHm0SdjqnLDusC1/QcDKWOAk4W5ric80Pyq8/i6ta2WoSgNmld11VSeHGZg5Z5c0vQGPJEklbKsDXgydNbz1ZX2aghA/aZq3w8eogaYcIOtjokiuGTWVNsvVc0+SZCOx+rQDcgE99wZmmZb5sO57LuHTsKSb9kUZ39Fs6AQNizxn9gp+RpJvxhp6aNlBy97u4T0Z0dDxDOBzEnhHGXJYUQAJOFSovhrW9uq5bwglsqqM8tU4MQDe5t4S2JzR4V0SJrJpkTSYpL9J+F+kHHTSnAz9hu66wvTPreDNP4Rp5FnB19RW5hEjUAF3VrnUu8Ii/xMW1HzKWKFxKa4QlQv3GbTuxvCNA90FGn/N8qVfISXRmJj1j/iuTEqC90YSh2o9JhuSsQ7RdniKbXDXptjzYm0LOatujmHfw5GkDtARbYxsBHBdJ41sG/AMxIpy7ryQ/nmu9aYouxxvR+A5UuNaPtt0yfO8IgNILm4cBy3+zrAO0PSZ8RLS1a0y5Jj3naFyJBWEuNTahj8B8UjcS8LOLCLztuzxt59WnSIbNjGbNUzgzbk/JiBT2/2w/sYEaY4UhYT/tSkRXrf+dhnHeg3u7eY2uWl13Z+Fhukx1S6rApQ4=",
+    "subtotal": 218500.4,
+    "total": 253460.46,
+    "moneda": "MXN",
+    "tipoCambio": 1,
+    "tipoDeComprobante": "I",
+    "exportacion": "01",
+    "lugarExpedicion": "06700",
+    "emisor": {
+      "rfc": "OHA180426U22",
+      "nombre": "OPERADORA DE HARDWARE & SOFTWARE RAMA",
+      "regimenFiscal": "626"
+    },
+    "receptor": {
+      "rfc": "AGE2112158F4",
+      "nombre": "ABASTECEDORA GEMCO",
+      "domicilioFiscalReceptor": "07620",
+      "regimenFiscalReceptor": "626",
+      "usoCfdi": "G01"
+    },
+    "conceptos": [
+      {
+        "claveProdServ": "39121004",
+        "cantidad": 124,
+        "claveUnidad": "H87",
+        "unidad": "PIEZA",
+        "descripcion": "FUENTE DE ENERGIA DELL OPTIPLEX 7010",
+        "valorUnitario": 1762.1,
+        "importe": 218500.4,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 218500.4,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 34960.064
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "impuestos": [
+      {
+        "traslados": [
+          {
+            "base": 218500.4,
+            "impuesto": "002",
+            "tipoFactor": "Tasa",
+            "tasaOCuota": 0.16,
+            "importe": 34960.06
+          }
+        ],
+        "totalImpuestosTrasladados": 34960.06,
+        "totalImpuestosRetenidos": 0
+      }
+    ],
+    "complemento": [
+      {
+        "version": "1.1",
+        "uuid": "A7285B87-C43D-4C08-B9FB-BAD8414E21BE",
+        "fechaTimbrado": "2024-08-09T18:32:00",
+        "selloCFD": "C1ilhGXyxLd2iB7flpgjRlgQUyXxj/1mNQ/7dE7EqBNPUJZ8KBrJbmp6dm9y5cCOUjY1EZxwG4NiaFg0YYT07kQxVSbMu39CvNn9mggvcKICcRHWA2aYq3Y2NFYM0wnzRQIDXinZ9WpIDUH3AMk83g824i9UdPk60Ani/sFYN74nBvHlRt1r3Mr8JLEYx8wVHrG2diSlB89dgTlldml0UKMjwhHoRaSUrhHaB4oOJY7uCr47YHq5Btqf09ki17z77XMNfeYu9ei0d9UEpWBgrSuUq7LtzCK9tjgwlTdgQIwqqKCRG6oiVz6rSr6xJLtxWCMuPO3Ah5G0z0c6zP/oXg==",
+        "rfcProvCertif": "NLC091211KC6",
+        "selloSAT": "VYEUZfc4hmgtLaHi+EToJR3XeO4GjuIaWTi1CUYHtLn40A1JEC8bJxUw2Xr2zegpoYk+rzCKFb3TpZPArdQs9UKJMMpouwgvaCDkmgVJnAWFsROI1vBPO1LXiEOZ//HWc43JssvOnC17apJ+8IMFzJ9INQ63PE15sPMX83azgSXdaFE7YdF0xtoxQi1G9aZC3Mn3BkZjzcyJu/ZXqdEXKBlxwWen0N1z6spbDLXiFr+t0o0knqzb+r8ym1MnkLC1J+LbpWKLC5mdXaPxqbb9Wogz9dX9O26I2HvyKGOwiLfwP2jVL0UnOc0tzKnzcdd/rVFqywcQnffkRA3O2RrQqQ==",
+        "noCertificadoSAT": "00001000000708142518"
+      }
+    ],
+    "addenda": []
+  },
+  "selloSat": "C1ilhGXyxLd2iB7flpgjRlgQUyXxj/1mNQ/7dE7EqBNPUJZ8KBrJbmp6dm9y5cCOUjY1EZxwG4NiaFg0YYT07kQxVSbMu39CvNn9mggvcKICcRHWA2aYq3Y2NFYM0wnzRQIDXinZ9WpIDUH3AMk83g824i9UdPk60Ani/sFYN74nBvHlRt1r3Mr8JLEYx8wVHrG2diSlB89dgTlldml0UKMjwhHoRaSUrhHaB4oOJY7uCr47YHq5Btqf09ki17z77XMNfeYu9ei0d9UEpWBgrSuUq7LtzCK9tjgwlTdgQIwqqKCRG6oiVz6rSr6xJLtxWCMuPO3Ah5G0z0c6zP/oXg==",
+  "pagos": []
+}

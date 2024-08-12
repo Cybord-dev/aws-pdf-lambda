@@ -25,7 +25,7 @@ public class PDFBuilder {
         templateEngine.setTemplateResolver(resolver);
     }
 
-    public String buildPdf(Context context) throws IOException {
+    public byte[] buildPdf(Context context) throws IOException {
 
         String inputHTML = templateEngine.process("index", context);
 
@@ -37,9 +37,7 @@ public class PDFBuilder {
             renderer.setDocumentFromString(inputHTML);
             renderer.layout();
             renderer.createPDF(outputStream);
-            String result = new String(Base64.getEncoder().encode(outputStream.toByteArray()));
-            System.out.println(result);
-            return result;
+            return outputStream.toByteArray();
         }
     }
 
