@@ -6,12 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.thymeleaf.context.Context;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.time.LocalDate;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PDFBuilderTest {
 
@@ -19,12 +15,21 @@ class PDFBuilderTest {
     private final PDFBuilder pdfBuilder = new PDFBuilder();
 
     @Test
-    public void generatePdfTest() throws IOException {
+    public void generateInvoicePdfTest() throws IOException {
 
         FacturaCustom invoice = objMapper.readValue(new File("./src/test/resources/json/pue.json"), FacturaCustom.class);
         Context ctx = new Context();
         ctx.setVariable("invoice", invoice);
-        writeFileToDisk("./src/test/resources/pdf/pue.pdf",pdfBuilder.buildPdf(ctx));
+        writeFileToDisk("./src/test/resources/pdf/pue.pdf",pdfBuilder.buildPdf(ctx, "factura"));
+    }
+
+    @Test
+    public void generateComplementPdfTest() throws IOException {
+
+        FacturaCustom invoice = objMapper.readValue(new File("./src/test/resources/json/complement.json"), FacturaCustom.class);
+        Context ctx = new Context();
+        ctx.setVariable("invoice", invoice);
+        writeFileToDisk("./src/test/resources/pdf/complement.pdf",pdfBuilder.buildPdf(ctx, "complemento"));
     }
 
     private void writeFileToDisk(String path, byte[] data) throws IOException {

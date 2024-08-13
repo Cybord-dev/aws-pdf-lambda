@@ -38,3 +38,4 @@ build/
 .DS_Store
 /.idea/encodings.xml
 /src/test/resources/pdf/pue.pdf
+/src/test/resources/pdf/complement.pdf

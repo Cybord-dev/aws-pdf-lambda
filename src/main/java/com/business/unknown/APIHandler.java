@@ -17,16 +17,16 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.time.LocalDate;
+import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 public class APIHandler implements RequestStreamHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(APIHandler.class);
-    private JSONParser parser = new JSONParser();
-    private PDFBuilder pdfBuilder = new PDFBuilder();
+    private final JSONParser parser = new JSONParser();
+    private final PDFBuilder pdfBuilder = new PDFBuilder();
 
-    private ObjectMapper objMapper = new ObjectMapper();
+    private final ObjectMapper objMapper = new ObjectMapper();
     @Override
     public void handleRequest(InputStream inputStream, OutputStream outputStream, Context context) throws IOException {
 
@@ -44,8 +44,8 @@ public class APIHandler implements RequestStreamHandler {
                 System.out.println(invoice.toString());
                 org.thymeleaf.context.Context ctx = new org.thymeleaf.context.Context();
                 ctx.setVariable("invoice", invoice);
-
-                body.put("pdf",new String(Base64.getEncoder().encode(pdfBuilder.buildPdf(ctx))));
+                String template = invoice.getTipoDocumento().toLowerCase();
+                body.put("pdf",new String(Base64.getEncoder().encode(pdfBuilder.buildPdf(ctx, template))));
                 body.put("message", "base64 PDF generated");
             }
 
@@ -66,7 +66,7 @@ public class APIHandler implements RequestStreamHandler {
             responseJson.put("exception", ex);
         }
 
-        OutputStreamWriter writer = new OutputStreamWriter(outputStream, "UTF-8");
+        OutputStreamWriter writer = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8);
         writer.write(responseJson.toString());
         writer.close();
     }

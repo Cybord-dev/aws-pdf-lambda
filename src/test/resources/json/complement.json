@@ -1,0 +1,204 @@
+{
+  "id": 124203,
+  "version": "4.0",
+  "rfcEmisor": "QCO210129CW8",
+  "rfcRemitente": "CAC080519CQ9",
+  "razonSocialEmisor": "QUESSEP CONSTRUCCIONES",
+  "lineaEmisor": "A",
+  "razonSocialRemitente": "CASAS ACROPOLIS",
+  "lineaRemitente": "CLIENTE",
+  "tipoDocumento": "Complemento",
+  "solicitante": "documentoshulk@gmail.com",
+  "folio": "202408121024480185",
+  "preFolio": "0824-01104",
+  "uuid": "A7C95EBC-3ADC-4D00-AB8E-3D73D2B5ED85",
+  "statusFactura": 3,
+  "packFacturacion": "NTLINK",
+  "metodoPago": "PPD",
+  "fechaCreacion": "2024-08-12T10:24:49",
+  "fechaActualizacion": "2024-08-12T13:26:13",
+  "fechaTimbrado": "2024-08-12T13:26:10",
+  "selloCfd": "vX2GvQ==",
+  "total": 666691.63,
+  "saldoPendiente": 0,
+  "validacionTeso": true,
+  "validacionOper": true,
+  "qr": "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",
+  "cadenaOriginal": "||1.1|A7C95EBC-3ADC-4D00-AB8E-3D73D2B5ED85|2024-08-12T12:26:03|NLC091211KC6|lJJ97gimAnb347Y8IxRiSnMGaBLd9lP9r/+jBKV2/bcAmXTBNYDlDYI/oAD7Xle38ElnZdU2PemDbKVFWJvzlohO8K7HidxHM7ylDs9fxiEDyuIzwXp0vsXYdIBzD59ZKBDFkZZ95Qama/J27AF2Z0RcMzgIMaewNBrzlbHmhzo5NYT6BMOS1ZwGpAqYdc0sQ6mz+G6tahaOZ48og1SG5sM64jfVNVqkf+WcTiv17to7eYyhXzgaosB/dRkRNFSGopVO2hNB3y+TrDJ8jbrnq+jlRT8xQwrsfViQCxz2bBakkhIj90IDJqgZeCY2pgh5G2v9K2/wW5NIA7KWvX2GvQ==|00001000000708142518||",
+  "totalDesc": "Seiscientos Sesenta y Seis Mil Seiscientos Noventa y Un PesosSesenta y Tres  Centavos",
+  "subTotalDesc": "Cero PesosCero  Centavos",
+  "usoCfdiDesc": "Pagos",
+  "regimenFiscalDesc": "Régimen Simplificado de Confianza",
+  "regimenFiscalReceptorDesc": "General de Ley Personas Morales",
+  "formaPagoDesc": "Transferencia electrónica de fondos",
+  "metodoPagoDesc": "PAGO EN UNA SOLA EXHIBICION",
+  "direccionEmisor": "AVENIDA (AV.) INSURGENTES SUR 686, DEL VALLE CENTRO, BENITO JUAREZ, CIUDAD DE MEXICO CP : 03100",
+  "direccionReceptor": "BOULEVARD DE LA NACIÓN 250, PEÑUELAS, QUERÉTARO, QUERÉTARO CP : 76148",
+  "tipoDeComprobanteDesc": "Pago",
+  "cfdi": {
+    "version": "4.0",
+    "serie": "PFPC",
+    "folio": "202408121024480185",
+    "fecha": "2024-08-12T12:26:06",
+    "sello": "lJJ97gimAnb347Y8IxRiSnMGaBLd9lP9r/+jBKV2/bcAmXTBNYDlDYI/oAD7Xle38ElnZdU2PemDbKVFWJvzlohO8K7HidxHM7ylDs9fxiEDyuIzwXp0vsXYdIBzD59ZKBDFkZZ95Qama/J27AF2Z0RcMzgIMaewNBrzlbHmhzo5NYT6BMOS1ZwGpAqYdc0sQ6mz+G6tahaOZ48og1SG5sM64jfVNVqkf+WcTiv17to7eYyhXzgaosB/dRkRNFSGopVO2hNB3y+TrDJ8jbrnq+jlRT8xQwrsfViQCxz2bBakkhIj90IDJqgZeCY2pgh5G2v9K2/wW5NIA7KWvX2GvQ==",
+    "noCertificado": "00001000000507115209",
+    "certificado": "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",
+    "subtotal": 0,
+    "total": 0,
+    "moneda": "XXX",
+    "tipoDeComprobante": "P",
+    "exportacion": "01",
+    "lugarExpedicion": "03100",
+    "emisor": {
+      "rfc": "QCO210129CW8",
+      "nombre": "QUESSEP CONSTRUCCIONES",
+      "regimenFiscal": "626"
+    },
+    "receptor": {
+      "rfc": "CAC080519CQ9",
+      "nombre": "CASAS ACROPOLIS",
+      "domicilioFiscalReceptor": "76148",
+      "regimenFiscalReceptor": "601",
+      "usoCfdi": "CP01"
+    },
+    "conceptos": [
+      {
+        "claveProdServ": "84111506",
+        "cantidad": 1,
+        "claveUnidad": "ACT",
+        "descripcion": "Pago",
+        "valorUnitario": 0,
+        "importe": 0,
+        "objetoImp": "01"
+      }
+    ],
+    "impuestos": [],
+    "complemento": [
+      {
+        "version": "1.1",
+        "uuid": "A7C95EBC-3ADC-4D00-AB8E-3D73D2B5ED85",
+        "fechaTimbrado": "2024-08-12T12:26:03",
+        "selloCFD": "lJJ97gimAnb347Y8IxRiSnMGaBLd9lP9r/+jBKV2/bcAmXTBNYDlDYI/oAD7Xle38ElnZdU2PemDbKVFWJvzlohO8K7HidxHM7ylDs9fxiEDyuIzwXp0vsXYdIBzD59ZKBDFkZZ95Qama/J27AF2Z0RcMzgIMaewNBrzlbHmhzo5NYT6BMOS1ZwGpAqYdc0sQ6mz+G6tahaOZ48og1SG5sM64jfVNVqkf+WcTiv17to7eYyhXzgaosB/dRkRNFSGopVO2hNB3y+TrDJ8jbrnq+jlRT8xQwrsfViQCxz2bBakkhIj90IDJqgZeCY2pgh5G2v9K2/wW5NIA7KWvX2GvQ==",
+        "rfcProvCertif": "NLC091211KC6",
+        "selloSAT": "HtJMjbUcAiY01arJdFSmwFTchleADcYk7gIm3/5TTc0JE9gdl+gBq9Jj99UbabKifQg7lfXM1nURglIx6J3MFVLCtmIlERKzlRWk9l81/nA+hRvK+DkiFkKapf11B2ENdKxS6D2iMRtTxSrKmJwhkBvyRJFkACMxTUAZQPyJF/7ELVwhjDJZvH0p8LUf+bgN5jRMJVnl1+4n/cLAvq084+oe5DGoN0hJY57jjtf1niduwm0gIMb1+rpYfVJKruqbkJAgpxv1Ykr2J15+v7l4q7z8pQQRG/r3KqZ2DDwK6x2ochsP0qTG7ZzwibLE1qJiW/qqzkBGETFA1nI8ai7x4A==",
+        "noCertificadoSAT": "00001000000708142518"
+      },
+      {
+        "version": "2.0",
+        "totales": {
+          "totalTrasladosBaseIVA16": 574734.16,
+          "totalTrasladosImpuestoIVA16": 91957.47,
+          "montoTotalPagos": 666691.63
+        },
+        "pagos": [
+          {
+            "relacionados": [
+              {
+                "impuestosDR": {
+                  "trasladosDR": {
+                    "trasladoDR": [
+                      {
+                        "baseDR": 300009.93,
+                        "impuestoDR": "002",
+                        "tipoFactorDR": "TASA",
+                        "tasaOCuotaDR": 0.16,
+                        "importeDR": 48001.59
+                      }
+                    ]
+                  }
+                },
+                "idDocumento": "8F0A44B9-87DD-4D60-840D-75746309FA5F",
+                "folio": "202407310733120180",
+                "monedaDR": "MXN",
+                "equivalenciaDR": 1,
+                "numParcialidad": 1,
+                "impSaldoAnt": 348011.52,
+                "impPagado": 348011.52,
+                "impSaldoInsoluto": 0,
+                "objetoImpDR": "02"
+              },
+              {
+                "impuestosDR": {
+                  "trasladosDR": {
+                    "trasladoDR": [
+                      {
+                        "baseDR": 274724.23,
+                        "impuestoDR": "002",
+                        "tipoFactorDR": "TASA",
+                        "tasaOCuotaDR": 0.16,
+                        "importeDR": 43955.88
+                      }
+                    ]
+                  }
+                },
+                "idDocumento": "DA0A9A10-A612-4F7B-B635-FAA60543CCF2",
+                "folio": "202407310729450181",
+                "monedaDR": "MXN",
+                "equivalenciaDR": 1,
+                "numParcialidad": 1,
+                "impSaldoAnt": 318680.11,
+                "impPagado": 318680.11,
+                "impSaldoInsoluto": 0,
+                "objetoImpDR": "02"
+              }
+            ],
+            "impuestosP": {
+              "trasladosP": {
+                "trasladoP": [
+                  {
+                    "baseP": 574734.16,
+                    "impuestoP": "002",
+                    "tipoFactorP": "TASA",
+                    "tasaOCuotaP": 0.16,
+                    "importeP": 91957.47
+                  }
+                ]
+              }
+            },
+            "fechaPago": "2024-08-10T00:00:00",
+            "formaDePagoP": "03",
+            "monedaP": "MXN",
+            "tipoCambioP": "1",
+            "monto": 666691.63
+          }
+        ]
+      }
+    ],
+    "addenda": []
+  },
+  "selloSat": "lJJ97gimAnb347Y8IxRiSnMGaBLd9lP9r/+jBKV2/bcAmXTBNYDlDYI/oAD7Xle38ElnZdU2PemDbKVFWJvzlohO8K7HidxHM7ylDs9fxiEDyuIzwXp0vsXYdIBzD59ZKBDFkZZ95Qama/J27AF2Z0RcMzgIMaewNBrzlbHmhzo5NYT6BMOS1ZwGpAqYdc0sQ6mz+G6tahaOZ48og1SG5sM64jfVNVqkf+WcTiv17to7eYyhXzgaosB/dRkRNFSGopVO2hNB3y+TrDJ8jbrnq+jlRT8xQwrsfViQCxz2bBakkhIj90IDJqgZeCY2pgh5G2v9K2/wW5NIA7KWvX2GvQ==",
+  "pagos": [
+    {
+      "idDocumento": "8F0A44B9-87DD-4D60-840D-75746309FA5F",
+      "folioOrigen": "202407310733120180",
+      "folio": "202408121024480185",
+      "equivalenciaDR": "1",
+      "formaDePagoP": "03",
+      "monedaDr": "MXN",
+      "numeroParcialidad": 1,
+      "importeSaldoAnterior": 348011.52,
+      "importePagado": 348011.52,
+      "importeSaldoInsoluto": 0,
+      "fechaPago": "2024-08-10 00:00:00",
+      "valido": true,
+      "statusFactura": 3,
+      "tipoCambio": 1
+    },
+    {
+      "idDocumento": "DA0A9A10-A612-4F7B-B635-FAA60543CCF2",
+      "folioOrigen": "202407310729450181",
+      "folio": "202408121024480185",
+      "equivalenciaDR": "1",
+      "formaDePagoP": "03",
+      "monedaDr": "MXN",
+      "numeroParcialidad": 1,
+      "importeSaldoAnterior": 318680.11,
+      "importePagado": 318680.11,
+      "importeSaldoInsoluto": 0,
+      "fechaPago": "2024-08-10 00:00:00",
+      "valido": true,
+      "statusFactura": 3,
+      "tipoCambio": 1
+    }
+  ]
+}

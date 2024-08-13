@@ -9,11 +9,10 @@ import org.xhtmlrenderer.pdf.ITextRenderer;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.Base64;
 
 public class PDFBuilder {
 
-    private TemplateEngine templateEngine;
+    private final TemplateEngine templateEngine;
 
     public PDFBuilder(){
         var resolver = new ClassLoaderTemplateResolver();
@@ -25,9 +24,10 @@ public class PDFBuilder {
         templateEngine.setTemplateResolver(resolver);
     }
 
-    public byte[] buildPdf(Context context) throws IOException {
+    public byte[] buildPdf(Context context, String template) throws IOException {
 
-        String inputHTML = templateEngine.process("index", context);
+
+        String inputHTML = templateEngine.process(template, context);
 
         try ( ByteArrayOutputStream outputStream = new ByteArrayOutputStream()){
             ITextRenderer renderer = new ITextRenderer();
