@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8"></meta>
+    <meta charset="UTF-8">
+    </meta>
     <title>PDF invoice</title>
     <style>
         .invoice-box {
@@ -12,165 +14,169 @@
             text-align: left;
             padding: 2px;
             font-size: 10px;
-			line-height: 10px;
-			font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-			color: #555;
+            line-height: 10px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
         }
-			.invoice-box table {
-				width: 100%;
-				line-height: inherit;
-				text-align: left;
-			}
 
-			.invoice-box table td {
-				padding: 5px;
-				vertical-align: top;
-			}
+        .invoice-box table {
+            width: 100%;
+            line-height: inherit;
+            text-align: left;
+        }
 
-			.invoice-box table tr td:nth-child(2) {
-				text-align: right;
-			}
+        .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+        }
 
-			.invoice-box table tr.top table td {
-				padding-bottom: 20px;
-			}
+        .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+        }
 
-			.invoice-box table tr.top table td.title {
-				font-size: 15px;
-				line-height: 15px;
-				color: #333;
-			}
+        .invoice-box table tr.top table td {
+            padding-bottom: 20px;
+        }
 
-			.invoice-box table tr.information table td {
-				padding-bottom: 10px;
-			}
+        .invoice-box table tr.top table td.title {
+            font-size: 15px;
+            line-height: 15px;
+            color: #333;
+        }
 
-			.invoice-box table tr.heading td {
-				background: #eee;
-				border-bottom: 1px solid #ddd;
-				font-weight: bold;
-			}
+        .invoice-box table tr.information table td {
+            padding-bottom: 10px;
+        }
 
-			.invoice-box table tr.details td {
-				padding-bottom: 5px;
-			}
+        .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
 
-			.invoice-box table tr.item td {
-				border-bottom: 1px solid #eee;
-			}
+        .invoice-box table tr.details td {
+            padding-bottom: 5px;
+        }
 
-			.invoice-box table tr.item.last td {
-				border-bottom: none;
-			}
+        .invoice-box table tr.item td {
+            border-bottom: 1px solid #eee;
+        }
 
-			.invoice-box table tr.total td:nth-child(2) {
-				border-top: 2px solid #eee;
-				font-weight: bold;
-			}
+        .invoice-box table tr.item.last td {
+            border-bottom: none;
+        }
+
+        .invoice-box table tr.total td:nth-child(2) {
+            border-top: 2px solid #eee;
+            font-weight: bold;
+        }
 
 
-			/** RTL **/
-			.invoice-box.rtl {
-				direction: rtl;
-				font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-			}
+        /** RTL **/
+        .invoice-box.rtl {
+            direction: rtl;
+            font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        }
 
-			.invoice-box.rtl table {
-				text-align: right;
-			}
+        .invoice-box.rtl table {
+            text-align: right;
+        }
 
-			.invoice-box.rtl table tr td:nth-child(2) {
-				text-align: left;
-			}
+        .invoice-box.rtl table tr td:nth-child(2) {
+            text-align: left;
+        }
     </style>
-    <link href="style.css" rel="stylesheet"></link>
+    <link href="style.css" rel="stylesheet">
+    </link>
 </head>
+
 <body>
-<div class="invoice-box">
-    <table cellpadding="0" cellspacing="0">
-        <tr class="top">
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td class="title">
-                            <h4 th:text="${invoice.razonSocialEmisor}"></h4>
-                            <h4 th:text="${invoice.razonSocialRemitente}"></h4>
-                        </td>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <h4 th:text="${invoice.razonSocialEmisor}"></h4>
+                                <h4 th:text="${invoice.razonSocialRemitente}"></h4>
+                            </td>
 
-                        <td>
-                            Invoice #: 123<br />
-                            Created: January 1, 2023<br />
-                            Due: February 1, 2023
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+                            <td>
+                                Invoice #: 123<br />
+                                Creado: January 10, 2025<br />
+                                vencimiento: February 1, 2025
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <tr class="information">
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td>
-                            Sparksuite, Inc.<br />
-                            12345 Sunny Road<br />
-                            Sunnyville, CA 12345
-                        </td>
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                Sparksuite, Inc.<br />
+                                12345 Sunny Road<br />
+                                Sunnyville, CA 12345
+                            </td>
 
-                        <td>
-                            Acme Corp.<br />
-                            John Doe<br />
-                            john@example.com
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+                            <td>
+                                Acme Corp.<br />
+                                John Doe<br />
+                                john@example.com
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
 
-        <tr class="heading">
-            <td>Payment Method</td>
+            <tr class="heading">
+                <td>Payment Method</td>
 
-            <td>Check #</td>
-        </tr>
+                <td>Check #</td>
+            </tr>
 
-        <tr class="details">
-            <td>Check</td>
+            <tr class="details">
+                <td>Check</td>
 
-            <td>1000</td>
-        </tr>
+                <td>1000</td>
+            </tr>
 
-        <tr class="heading">
-            <td>CLAVE PROD SERV</td>
-            <td>CANTIDAD</td>
-            <td>UNIDAD</td>
-            <td>UNIDAD</td>
-            <td>DESCRIPCION</td>
-            <td>VALOR UNITARIO</td>
-            <td>IMPORTE</td>
-        </tr>
+            <tr class="heading">
+                <td>CLAVE PROD SERV</td>
+                <td>CANTIDAD</td>
+                <td>UNIDAD</td>
+                <td>UNIDAD</td>
+                <td>DESCRIPCION</td>
+                <td>VALOR UNITARIO</td>
+                <td>IMPORTE</td>
+            </tr>
 
-        <tr th:each="concept: ${invoice.cfdi.conceptos}" class="item">
-            <td th:text="${concept.claveProdServ}" />
-            <td th:text="${concept.cantidad}" />
-            <td th:text="${concept.claveUnidad}" />
-            <td th:text="${concept.unidad}" />
-            <td th:text="${concept.descripcion}" />
-            <td th:text="${concept.valorUnitario}" />
-            <td th:text="${concept.importe}" />
-        </tr>
+            <tr th:each="concept: ${invoice.cfdi.conceptos}" class="item">
+                <td th:text="${concept.claveProdServ}" />
+                <td th:text="${concept.cantidad}" />
+                <td th:text="${concept.claveUnidad}" />
+                <td th:text="${concept.unidad}" />
+                <td th:text="${concept.descripcion}" />
+                <td th:text="${concept.valorUnitario}" />
+                <td th:text="${concept.importe}" />
+            </tr>
 
-        <tr class="item last">
-            <td colspan="5"></td>
-            <td>SUBTOTAL :</td>
-            <td><span th:text="${invoice.cfdi.subtotal}"> MXN</span></td>
-        </tr>
+            <tr class="item last">
+                <td colspan="5"></td>
+                <td>SUBTOTAL :</td>
+                <td><span th:text="${invoice.cfdi.subtotal}"> MXN</span></td>
+            </tr>
 
-        <tr class="total">
-            <td colspan="5"></td>
-            <td>TOTAL :</td>
-            <td><span th:text="${invoice.cfdi.total}"> MXN</span></td>
-        </tr>
-    </table>
-</div>
+            <tr class="total">
+                <td colspan="5"></td>
+                <td>TOTAL :</td>
+                <td><span th:text="${invoice.cfdi.total}"> MXN</span></td>
+            </tr>
+        </table>
+    </div>
 </body>
+
 </html>
