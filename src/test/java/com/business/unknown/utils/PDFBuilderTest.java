@@ -1,13 +1,14 @@
 package com.business.unknown.utils;
 
-import com.business.unknown.model.FacturaCustom;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.Test;
-import org.thymeleaf.context.Context;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import org.junit.jupiter.api.Test;
+import org.thymeleaf.context.Context;
+
+import com.business.unknown.model.FacturaCustom;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 class PDFBuilderTest {
 
@@ -17,23 +18,27 @@ class PDFBuilderTest {
     @Test
     public void generateInvoicePdfTest() throws IOException {
 
-        FacturaCustom invoice = objMapper.readValue(new File("./src/test/resources/json/pue.json"), FacturaCustom.class);
+        FacturaCustom invoice = objMapper.readValue(new File("./src/test/resources/json/fact2.json"),
+                FacturaCustom.class);
         Context ctx = new Context();
         ctx.setVariable("invoice", invoice);
-        writeFileToDisk("./src/test/resources/pdf/pue.pdf",pdfBuilder.buildPdf(ctx, "factura"));
+        writeFileToDisk("./src/test/resources/pdf/pue.pdf", pdfBuilder.buildPdf(ctx, "factura"));
     }
 
     @Test
     public void generateComplementPdfTest() throws IOException {
 
-        FacturaCustom invoice = objMapper.readValue(new File("./src/test/resources/json/complement.json"), FacturaCustom.class);
+        FacturaCustom invoice = objMapper.readValue(new File("./src/test/resources/json/complement.json"),
+                FacturaCustom.class);
         Context ctx = new Context();
         ctx.setVariable("invoice", invoice);
-        writeFileToDisk("./src/test/resources/pdf/complement.pdf",pdfBuilder.buildPdf(ctx, "complemento"));
+        writeFileToDisk("./src/test/resources/pdf/complement.pdf", pdfBuilder.buildPdf(ctx, "complemento"));
     }
 
     private void writeFileToDisk(String path, byte[] data) throws IOException {
-        try (FileOutputStream fos = new FileOutputStream(path)) {
+        File file = new File(path);
+        file.getParentFile().mkdirs(); // Create directories if they do not exist
+        try (FileOutputStream fos = new FileOutputStream(file)) {
             fos.write(data);
         }
     }
