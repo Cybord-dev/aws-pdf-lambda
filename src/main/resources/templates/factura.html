@@ -160,7 +160,13 @@
 
     <table style="width: 100%; border-collapse: collapse; table-layout: fixed;  border: none;">
         <tr style=" border: none;">
-            <td style="width: 33%; vertical-align: top; padding: 10px;border: none;">
+            <td style="width: 33%; vertical-align: middle; padding: 10px;border: none;">
+                <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img>
+
+            </td>
+
+            <td style="width: 33%; vertical-align: middle; text-align: left; padding: 10px;border: none;">
+
                 <div class="left">
                     <p><strong th:text="${invoice.razonSocialEmisor}">GRUPO ASESOR VONH-BILA</strong></p>
                     <p th:text="'RFC: ' + ${invoice.rfcEmisor}">RFC: GAV211021DA</p>
@@ -169,11 +175,6 @@
                     <p th:text="${invoice.direccionEmisor}">CHILPANCINGO 133, OF. 4, CUAUHTÉMOC, CIUDAD DE MÉXICO, C.P.
                         06760</p>
                 </div>
-            </td>
-
-            <td style="width: 33%; vertical-align: middle; text-align: center; padding: 10px;border: none;">
-                <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img>
-
             </td>
 
             <td style="width: 33%; vertical-align: top; padding: 10px;border: none;">
@@ -256,8 +257,16 @@
                 <td class="text-right"
                     th:text="'$ ' + ${#numbers.formatDecimal(concepto.valorUnitario, 1, 'COMMA', 2, 'POINT')}">$
                     22,794.00</td>
-                <td class="text-right"
-                    th:text="'$ ' + ${#numbers.formatDecimal(concepto.descuento, 1, 'COMMA', 2, 'POINT')}">$ NaN</td>
+                <td class="text-right">
+                    <div th:if="${concepto.descuento != null}">
+
+                        th:text="'$ ' + ${#numbers.formatDecimal(concepto.descuento, 1, 'COMMA', 2, 'POINT')}">$ NaN
+
+                    </div>
+                    <div th:if="${concepto.descuento == null}">
+                        0
+                    </div>
+                </td>
                 <td class="text-right"
                     th:text="'$ ' + ${#numbers.formatDecimal(concepto.importe, 1, 'COMMA', 2, 'POINT')}">$ 22,794.00
                 </td>
@@ -315,48 +324,59 @@
             </td>
         </tr>
     </table>
+    <table style="width: 100%; border-collapse: collapse; table-layout: fixed;  border: none; margin:0px; ">
+        <tr style=" border: none;">
+            <td style="width: 82%; vertical-align: top; padding: 0px;border: none;">
+                <div class="digital-stamps">
+                    <div class="stamps-content">
+                        <table>
+                            <tr>
+                                <td class="blue-header">SELLO DIGITAL DEL CFDI</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloCfd}">
+                                    NOCiQE+5Zup54srMcnXV1XOQ6bOMPz+rO94iGt6MkmdFO7JMkvrKpDcsAzx4ttmwldYOQB9BaPvSl8i2FFMA+TNzUVVd1tl/+HTXFrfMe8WcUDy5s
+                                    GcUkS5e7mmETkpfQLv+K8dGhOKiVKwJl840PebwC52i3PLejLeiCOXhL2VTMVmHl8usLHEFemYOBEe6bNvG2vWzNTGcGQ5rEHsEwF
+                                    OR00iMZraBFWhWaAzUcBSqFJflwNgng3sjl8ZDmca8t0pCrk1pxbxrWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AlbnDrLiwRN7SBEtG9GGg19xkcpw==
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="blue-header">SELLO DEL SAT</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloSat}">
+                                    gDSawHKfDagLAjdSVgpCX5lwPezU1z48gyUTMy2C2J5sg4BQSs3JLUKwVjTREpMcYxduwqiWnPwQ48yRcmPY8JhCemXZ8bqUQukJFf7hOMCc4P+
+                                    N4sfc/5rjFEfTyGVoAR5MeMjXixBE1tB1vVTwh07D9XLruBirQcC2+RSd989t6H+SsjVQa+KMiC4smEDVeYXskE6yLLKA8DLQUcqpD3ZZwGQ8iIKS
+                                    LO7rGmB54mfeoWEcwG2hXAg59xdRmr8HX1gmsgJ4kGFfzJbFz27h0YwI8GYpGTd7MtFfuJTCoRHh763kc5D38UcJdszW7RhAM6LTp5R207dMVw==
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="blue-header">CADENA ORIGINAL</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.cadenaOriginal}">
+                                    ||1.1|61FCB85B-4DC5-4D00-B1CC-526BFFB33B69|2025-01-03T10:02:51|NL009121|RC09|NOCIONE2|52/i
+                                    gP4+MeXvY1XOQ6bOMPz+DO94Gt6MkmdFO7JMkvrKpDcsAzx4ttmwldYOQB9BaPvSl8i2FFMA+TNzUVVd1tl/+HT
+                                    XFrfMe8WcUDy5sGcUkS5e7mmETkpfQLv+K8dGhOKiVKwJl840PebwC52i3PLejLeiCOXhL2VTMVmHl8usLHE
+                                    VOBEe6bNvG2vWzNTGcGQ5rEHsEwFOR00iMZraBFWhWaAzUcBSqFJflwNgng3sjl8ZDmca8t0pCrk
+                                    1pxbxrWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AlbnDrLiwRN7SBEtG9GGg19xkcpw==|00001000000708142525
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
-    <div class="digital-stamps">
-        <div class="stamps-content">
-            <table>
-                <tr>
-                    <td class="blue-header">SELLO DIGITAL DEL CFDI</td>
-                </tr>
-                <tr>
-                    <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloCfd}">
-                        NOCiQE+5Zup54srMcnXV1XOQ6bOMPz+rO94iGt6MkmdFO7JMkvrKpDcsAzx4ttmwldYOQB9BaPvSl8i2FFMA+TNzUVVd1tl/+HTXFrfMe8WcUDy5s
-                        GcUkS5e7mmETkpfQLv+K8dGhOKiVKwJl840PebwC52i3PLejLeiCOXhL2VTMVmHl8usLHEFemYOBEe6bNvG2vWzNTGcGQ5rEHsEwF
-                        OR00iMZraBFWhWaAzUcBSqFJflwNgng3sjl8ZDmca8t0pCrk1pxbxrWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AlbnDrLiwRN7SBEtG9GGg19xkcpw==
-                    </td>
-                </tr>
-                <tr>
-                    <td class="blue-header">SELLO DEL SAT</td>
-                </tr>
-                <tr>
-                    <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloSat}">
-                        gDSawHKfDagLAjdSVgpCX5lwPezU1z48gyUTMy2C2J5sg4BQSs3JLUKwVjTREpMcYxduwqiWnPwQ48yRcmPY8JhCemXZ8bqUQukJFf7hOMCc4P+
-                        N4sfc/5rjFEfTyGVoAR5MeMjXixBE1tB1vVTwh07D9XLruBirQcC2+RSd989t6H+SsjVQa+KMiC4smEDVeYXskE6yLLKA8DLQUcqpD3ZZwGQ8iIKS
-                        LO7rGmB54mfeoWEcwG2hXAg59xdRmr8HX1gmsgJ4kGFfzJbFz27h0YwI8GYpGTd7MtFfuJTCoRHh763kc5D38UcJdszW7RhAM6LTp5R207dMVw==
-                    </td>
-                </tr>
-                <tr>
-                    <td class="blue-header">CADENA ORIGINAL</td>
-                </tr>
-                <tr>
-                    <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.cadenaOriginal}">
-                        ||1.1|61FCB85B-4DC5-4D00-B1CC-526BFFB33B69|2025-01-03T10:02:51|NL009121|RC09|NOCIONE2|52/i
-                        gP4+MeXvY1XOQ6bOMPz+DO94Gt6MkmdFO7JMkvrKpDcsAzx4ttmwldYOQB9BaPvSl8i2FFMA+TNzUVVd1tl/+HT
-                        XFrfMe8WcUDy5sGcUkS5e7mmETkpfQLv+K8dGhOKiVKwJl840PebwC52i3PLejLeiCOXhL2VTMVmHl8usLHE
-                        VOBEe6bNvG2vWzNTGcGQ5rEHsEwFOR00iMZraBFWhWaAzUcBSqFJflwNgng3sjl8ZDmca8t0pCrk
-                        1pxbxrWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AlbnDrLiwRN7SBEtG9GGg19xkcpw==|00001000000708142525
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="qr-codes">
-            <!-- <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img> -->
-        </div>
-    </div>
+                </div>
+            </td>
+
+            <td style="width: 18%; vertical-align: middle; padding: 0px;border: none;">
+                <div class="qr-codes">
+                    <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img>
+                    <!-- <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img> -->
+                </div>
+            </td>
+        </tr>
+    </table>
+
 </body>
 
 </html>
