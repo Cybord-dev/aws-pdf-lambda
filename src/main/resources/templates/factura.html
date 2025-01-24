@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     </meta>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </meta>
     <title>Factura</title>
@@ -168,12 +170,10 @@
             <td style="width: 33%; vertical-align: middle; text-align: left; padding: 10px;border: none;">
 
                 <div class="left">
-                    <p><strong th:text="${invoice.razonSocialEmisor}">GRUPO ASESOR VONH-BILA</strong></p>
-                    <p th:text="'RFC: ' + ${invoice.rfcEmisor}">RFC: GAV211021DA</p>
-                    <p th:text="'RÉGIMEN: ' + ${invoice.regimenFiscalDesc}">RÉGIMEN: 601 - General de Ley Personas
-                        Morales</p>
-                    <p th:text="${invoice.direccionEmisor}">CHILPANCINGO 133, OF. 4, CUAUHTÉMOC, CIUDAD DE MÉXICO, C.P.
-                        06760</p>
+                    <p><strong th:text="${invoice.razonSocialEmisor}"></strong></p>
+                    <p th:text="'RFC: ' + ${invoice.cfdi.emisor.rfc}"></p>
+                    <p th:text="'RÉGIMEN: ' + ${data.get('regimenFiscal')}"></p>
+                    <p th:text="${invoice.direccionEmisor}"></p>
                 </div>
             </td>
 
@@ -186,7 +186,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="text-center" th:text="${invoice.folio}">PFPC 20250110010833077</td>
+                            <td colspan="2" class="text-center" th:text="${invoice.cfdi.folio}"></td>
                         </tr>
                         <tr>
                             <td colspan="2" class="text-center" style="background-color: #004b87; color: white;">
@@ -196,7 +196,6 @@
                         <tr>
                             <td colspan="2" class="text-center"
                                 th:text="${#dates.format(invoice.fechaTimbrado, 'yyyy-MM-dd HH:mm:ss')}">
-                                2025-01-01T13:22:48
                             </td>
                         </tr>
                         <tr>
@@ -206,7 +205,6 @@
                         </tr>
                         <tr>
                             <td colspan="2" class="text-center" style="font-size: 9px;" th:text="${invoice.uuid}">
-                                F3635C54-D5C2-4BA6-A6D7-D65DAAB04F83
                             </td>
                         </tr>
                     </table>
@@ -220,19 +218,16 @@
             <td colspan="4" class="blue-header">INFORMACIÓN DEL RECEPTOR</td>
         </tr>
         <tr>
-            <td><strong>R.F.C.:</strong> <span th:text="${invoice.rfcRemitente}">PAGJ721206NI5</span></td>
-            <td colspan="3"><strong>Razón social:</strong> <span th:text="${invoice.razonSocialRemitente}">JORGE RENE
-                    PARTIDA GODINEZ</span></td>
+            <td><strong>R.F.C.:</strong> <span th:text="${invoice.cfdi.receptor.rfc}"></span></td>
+            <td colspan="3"><strong>Razón social:</strong> <span th:text="${invoice.razonSocialRemitente}"></span></td>
         </tr>
         <tr>
-            <td colspan="2"><strong>Uso CFDI:</strong> <span th:text="${invoice.usoCfdiDesc}">G03 - Gastos en
-                    general</span></td>
-            <td colspan="2"><strong>Regimen fiscal:</strong> <span th:text="${invoice.regimenFiscalReceptorDesc}">-
-                    Régimen Simplificado de Confianza</span></td>
+            <td colspan="2"><strong>Uso CFDI:</strong> <span th:text="${data.get('usoCfdi')}"></span></td>
+            <td colspan="2"><strong>Regimen fiscal:</strong> <span
+                    th:text="${data.get('regimenFiscalReceptor')}"></span></td>
         </tr>
         <tr>
-            <td colspan="4"><strong>Dirección:</strong> <span th:text="${invoice.direccionReceptor}">JUAN TINOCO
-                    10,303,MERCED GÓMEZ,BENITO JUÁREZ,CIUDAD DE MÉXICO,C.P. 03930</span></td>
+            <td colspan="4"><strong>Dirección:</strong> <span th:text="${invoice.direccionReceptor}"></span></td>
         </tr>
     </table>
 
@@ -251,24 +246,21 @@
         <tbody>
             <tr th:each="concepto : ${invoice.cfdi.conceptos}">
                 <td class="text-right" th:text="${concepto.cantidad}">1</td>
-                <td th:text="${concepto.claveProdServ}">80131800</td>
-                <td th:text="${concepto.descripcion}">ADMINSTRACION DE INMEBLE CORRESPONDIENTE A ENERO 2025</td>
-                <td th:text="${concepto.claveUnidad}">E48 - Unidad de Servicio</td>
+                <td th:text="${concepto.claveProdServ}"></td>
+                <td th:text="${concepto.descripcion}"></td>
+                <td th:text="${concepto.claveUnidad}"></td>
                 <td class="text-right"
-                    th:text="'$ ' + ${#numbers.formatDecimal(concepto.valorUnitario, 1, 'COMMA', 2, 'POINT')}">$
-                    22,794.00</td>
+                    th:text="'$ ' + ${#numbers.formatDecimal(concepto.valorUnitario, 1, 'COMMA', 2, 'POINT')}"></td>
                 <td class="text-right">
                     <div th:if="${concepto.descuento != null}">
-
                         th:text="'$ ' + ${#numbers.formatDecimal(concepto.descuento, 1, 'COMMA', 2, 'POINT')}">$ NaN
-
                     </div>
                     <div th:if="${concepto.descuento == null}">
                         0
                     </div>
                 </td>
                 <td class="text-right"
-                    th:text="'$ ' + ${#numbers.formatDecimal(concepto.importe, 1, 'COMMA', 2, 'POINT')}">$ 22,794.00
+                    th:text="'$ ' + ${#numbers.formatDecimal(concepto.importe, 1, 'COMMA', 2, 'POINT')}">
                 </td>
             </tr>
         </tbody>
@@ -277,23 +269,21 @@
     <div class="totals-section">
         <div>
             <span class="totals-label">SUBTOTAL</span>
-            <span class="totals-amount" th:text="'$ ' + ${invoice.saldoPendiente}">$ 22,794.00</span>
+            <span class="totals-amount" th:text="'$ ' + ${invoice.cfdi.subtotal}"></span>
         </div>
         <div>
             <span class="totals-label">IVA 16.00%</span>
             <span class="totals-amount"
-                th:text="'$ ' + ${#numbers.formatDecimal(invoice.impuestosTrasladados, 1, 'COMMA', 2, 'POINT')}">$
-                3,647.04</span>
+                th:text="'$ ' + ${#numbers.formatDecimal(invoice.cfdi.impuestos[0].totalImpuestosTrasladados, 1, 'COMMA', 2, 'POINT')}"></span>
         </div>
         <div>
             <span class="totals-label">IMPUESTOS RETENIDOS</span>
             <span class="totals-amount"
-                th:text="'$ ' + ${#numbers.formatDecimal(invoice.impuestosRetenidos, 1, 'COMMA', 2, 'POINT')}">$
-                0.00</span>
+                th:text="'$ ' + ${#numbers.formatDecimal(invoice.cfdi.impuestos[0].totalImpuestosRetenidos, 1, 'COMMA', 2, 'POINT')}"></span>
         </div>
         <div>
             <span class="totals-label">TOTAL</span>
-            <span class="totals-amount" th:text="'$ ' + ${invoice.total}">$ 26,441.04</span>
+            <span class="totals-amount" th:text="'$ ' + ${invoice.cfdi.total}"></span>
         </div>
     </div>
 
@@ -304,23 +294,22 @@
         </tr>
         <tr>
             <td style="width: 50%;">
-                <strong>Forma de pago:</strong> <span th:text="${invoice.formaPagoDesc}">03 - Transferencia electrónica
-                    de fondos</span><br></br>
-                <strong>Condiciones de pago:</strong> <span th:text="${invoice.cfdi.condicionesDePago}"></span><br></br>
-                <strong>Método de pago:</strong> <span th:text="${invoice.metodoPagoDesc}">PUE</span><br></br>
-                <strong>Tipo de Comprobante:</strong> <span th:text="${invoice.tipoDeComprobanteDesc}">I -
-                    Ingreso</span><br></br>
-                <strong>Tipo Relacion:</strong> <span th:text="${invoice.tipoRelacion}"></span>
+                <strong>Forma de pago:</strong> <span th:text="${data.get('formaPago')}"></span><br></br>
+                <!-- <strong>Condiciones de pago:</strong> <span th:text="${invoice.cfdi.condicionesDePago}"></span><br></br> -->
+                <strong>Método de pago:</strong> <span th:text="${data.get('metodoPago')}"></span><br></br>
+                <strong>Tipo de Comprobante:</strong> <span th:text="${data.get('tipoDeComprobante')}"></span><br></br>
+                <!-- <strong>Tipo Relacion:</strong> <span th:text="${invoice.tipoRelacion}"></span> -->
             </td>
             <td>
-                <strong>No. CSD del Emisor:</strong> <span
-                    th:text="${invoice.cfdi.noCertificado}">00001000000512058366</span><br></br>
+                <strong>No. CSD del Emisor:</strong> <span th:text="${invoice.cfdi.noCertificado}"></span><br></br>
                 <strong>No. CSD del SAT:</strong> <span
-                    th:text="${invoice.cfdi.noCertificado}">00001000000708142518</span><br></br>
+                    th:text="${invoice.cfdi.complemento[0].noCertificadoSAT}"></span><br></br>
                 <strong>Fecha y hora de certificación:</strong> <span
-                    th:text="${#dates.format(invoice.fechaTimbrado, 'yyyy-MM-dd HH:mm:ss')}">2025-01-01T13:22:50</span><br></br>
-                <strong>Moneda:</strong> <span th:text="${invoice.cfdi.moneda}">MXN</span><br></br>
-                <strong>Relacion:</strong> <span th:text="${invoice.relacion}"></span>
+                    th:text="${#dates.format(invoice.fechaTimbrado, 'yyyy-MM-dd HH:mm:ss')}"></span><br></br>
+                <strong>Moneda:</strong> <span th:text="${
+                    data.get('moneda')
+                }">MXN</span><br></br>
+                <!-- <strong>Relacion:</strong> <span th:text="${invoice.relacion}"></span> -->
             </td>
         </tr>
     </table>
@@ -334,32 +323,19 @@
                                 <td class="blue-header">SELLO DIGITAL DEL CFDI</td>
                             </tr>
                             <tr>
-                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloCfd}">
-                                    NOCiQE+5Zup54srMcnXV1XOQ6bOMPz+rO94iGt6MkmdFO7JMkvrKpDcsAzx4ttmwldYOQB9BaPvSl8i2FFMA+TNzUVVd1tl/+HTXFrfMe8WcUDy5s
-                                    GcUkS5e7mmETkpfQLv+K8dGhOKiVKwJl840PebwC52i3PLejLeiCOXhL2VTMVmHl8usLHEFemYOBEe6bNvG2vWzNTGcGQ5rEHsEwF
-                                    OR00iMZraBFWhWaAzUcBSqFJflwNgng3sjl8ZDmca8t0pCrk1pxbxrWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AlbnDrLiwRN7SBEtG9GGg19xkcpw==
-                                </td>
+                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloCfd}"></td>
                             </tr>
                             <tr>
                                 <td class="blue-header">SELLO DEL SAT</td>
                             </tr>
                             <tr>
-                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloSat}">
-                                    gDSawHKfDagLAjdSVgpCX5lwPezU1z48gyUTMy2C2J5sg4BQSs3JLUKwVjTREpMcYxduwqiWnPwQ48yRcmPY8JhCemXZ8bqUQukJFf7hOMCc4P+
-                                    N4sfc/5rjFEfTyGVoAR5MeMjXixBE1tB1vVTwh07D9XLruBirQcC2+RSd989t6H+SsjVQa+KMiC4smEDVeYXskE6yLLKA8DLQUcqpD3ZZwGQ8iIKS
-                                    LO7rGmB54mfeoWEcwG2hXAg59xdRmr8HX1gmsgJ4kGFfzJbFz27h0YwI8GYpGTd7MtFfuJTCoRHh763kc5D38UcJdszW7RhAM6LTp5R207dMVw==
-                                </td>
+                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloSat}"></td>
                             </tr>
                             <tr>
                                 <td class="blue-header">CADENA ORIGINAL</td>
                             </tr>
                             <tr>
                                 <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.cadenaOriginal}">
-                                    ||1.1|61FCB85B-4DC5-4D00-B1CC-526BFFB33B69|2025-01-03T10:02:51|NL009121|RC09|NOCIONE2|52/i
-                                    gP4+MeXvY1XOQ6bOMPz+DO94Gt6MkmdFO7JMkvrKpDcsAzx4ttmwldYOQB9BaPvSl8i2FFMA+TNzUVVd1tl/+HT
-                                    XFrfMe8WcUDy5sGcUkS5e7mmETkpfQLv+K8dGhOKiVKwJl840PebwC52i3PLejLeiCOXhL2VTMVmHl8usLHE
-                                    VOBEe6bNvG2vWzNTGcGQ5rEHsEwFOR00iMZraBFWhWaAzUcBSqFJflwNgng3sjl8ZDmca8t0pCrk
-                                    1pxbxrWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AlbnDrLiwRN7SBEtG9GGg19xkcpw==|00001000000708142525
                                 </td>
                             </tr>
                         </table>
@@ -371,11 +347,11 @@
             <td style="width: 18%; vertical-align: middle; padding: 0px;border: none;">
                 <div class="qr-codes">
                     <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img>
-                    <!-- <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img> -->
                 </div>
             </td>
         </tr>
     </table>
+    <p><strong> ESTE DOCUMENTO ES UNA REPRESENTACIÓN IMPRESA DE UN CFDI </strong></p>
 
 </body>
 

@@ -1,5 +1,6 @@
 package com.business.unknown.model.cfdi;
 
+import com.business.unknown.model.complementos.Complemento;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
@@ -78,5 +79,6 @@ public class Cfdi implements Serializable {
   @NonNull private List<Concepto> conceptos;
   //
   private List<Impuesto> impuestos;
+  private List<Complemento> complemento;
 
 }

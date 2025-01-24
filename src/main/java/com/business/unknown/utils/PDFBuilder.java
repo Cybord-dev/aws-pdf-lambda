@@ -1,14 +1,14 @@
 package com.business.unknown.utils;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.xhtmlrenderer.layout.SharedContext;
 import org.xhtmlrenderer.pdf.ITextRenderer;
-
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 
 public class PDFBuilder {
 
@@ -26,11 +26,11 @@ public class PDFBuilder {
 
     public byte[] buildPdf(Context context, String template) throws IOException {
 
-
         String inputHTML = templateEngine.process(template, context);
 
-        try ( ByteArrayOutputStream outputStream = new ByteArrayOutputStream()){
+        try (ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
             ITextRenderer renderer = new ITextRenderer();
+
             SharedContext sharedContext = renderer.getSharedContext();
             sharedContext.setPrint(true);
             sharedContext.setInteractive(false);
@@ -40,8 +40,5 @@ public class PDFBuilder {
             return outputStream.toByteArray();
         }
     }
-
-
-
 
 }

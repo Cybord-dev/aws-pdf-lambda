@@ -1,176 +1,359 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8"></meta>
-    <title>PDF invoice</title>
+    <meta charset="UTF-8">
+    </meta>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <title>Factura</title>
     <style>
-        .invoice-box {
-            border: 1px solid gray;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-            text-align: left;
-            padding: 2px;
-            font-size: 10px;
-			line-height: 10px;
-			font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-			color: #555;
+        @page {
+            size: A4;
+            margin: 10mm;
         }
-			.invoice-box table {
-				width: 100%;
-				line-height: inherit;
-				text-align: left;
-			}
 
-			.invoice-box table td {
-				padding: 5px;
-				vertical-align: top;
-			}
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 8px;
+            margin: 0;
+            padding: 10px;
+        }
 
-			.invoice-box table tr td:nth-child(2) {
-				text-align: right;
-			}
+        .logo {
+            width: 25%;
+        }
 
-			.invoice-box table tr.top table td {
-				padding-bottom: 20px;
-			}
+        .company-info {
+            font-size: 10px;
+        }
 
-			.invoice-box table tr.top table td.title {
-				font-size: 15px;
-				line-height: 15px;
-				color: #333;
-			}
+        .invoice-details {
 
-			.invoice-box table tr.information table td {
-				padding-bottom: 10px;
-			}
+            width: 33%;
+        }
 
-			.invoice-box table tr.heading td {
-				background: #eee;
-				border-bottom: 1px solid #ddd;
-				font-weight: bold;
-			}
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 1px solid #004b87;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
 
-			.invoice-box table tr.details td {
-				padding-bottom: 5px;
-			}
+        .table1 {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 0px solid #004a8700;
+            border-radius: 0px;
+            overflow: hidden;
+            margin-bottom: 0px;
+        }
 
-			.invoice-box table tr.item td {
-				border-bottom: 1px solid #eee;
-			}
+        th,
+        td {
+            border: 1px solid #004b87;
+            padding: 4px;
+            text-align: left;
+        }
 
-			.invoice-box table tr.item.last td {
-				border-bottom: none;
-			}
+        table {
+            width: 100%;
+            table-layout: fixed;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
 
-			.invoice-box table tr.total td:nth-child(2) {
-				border-top: 2px solid #eee;
-				font-weight: bold;
-			}
+        th,
+        td {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
 
+        th {
+            background-color: #004b87;
+            color: white;
+        }
 
-			/** RTL **/
-			.invoice-box.rtl {
-				direction: rtl;
-				font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-			}
+        .text-right {
+            text-align: right;
+        }
 
-			.invoice-box.rtl table {
-				text-align: right;
-			}
+        .text-center {
+            text-align: center;
+        }
 
-			.invoice-box.rtl table tr td:nth-child(2) {
-				text-align: left;
-			}
+        .blue-header {
+            background-color: #004b87;
+            color: white;
+            font-weight: bold;
+            padding: 8px;
+        }
+
+        .totals-section {
+            text-align: right;
+            margin: 20px 0;
+        }
+
+        .totals-section div {
+            margin: 5px 0;
+        }
+
+        .totals-label {
+            display: inline-block;
+            min-width: 200px;
+            font-weight: bold;
+        }
+
+        .totals-amount {
+            display: inline-block;
+            min-width: 100px;
+        }
+
+        .digital-stamps {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stamps-content table {
+            margin-bottom: 0;
+        }
+
+        .stamps-content td {
+            border-right: none;
+            border-left: none;
+        }
+
+        .stamps-content tr:first-child td {
+            border-top: none;
+        }
+
+        .stamps-content tr:last-child td {
+            border-bottom: none;
+        }
+
+        .qr-codes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .qr-code {
+            width: 120px;
+            height: 120px;
+        }
+
+        .stamp-section {
+            margin-bottom: 10px;
+            word-break: break-all;
+            font-size: 8px;
+        }
     </style>
-    <link href="style.css" rel="stylesheet"></link>
 </head>
+
 <body>
-<div class="invoice-box">
-    <table cellpadding="0" cellspacing="0">
-        <tr class="top">
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td class="title">
-                            <h4 th:text="${invoice.razonSocialEmisor}"></h4>
-                            <h4 th:text="${invoice.razonSocialRemitente}"></h4>
-                        </td>
 
-                        <td>
-                            COMPLEMENTO DE PAGO<br />
-                            Created: AGOSTO 13, 2024<br />
-                            Diego
-                        </td>
-                    </tr>
-                </table>
+    <table style="width: 100%; border-collapse: collapse; table-layout: fixed;  border: none;">
+        <tr style=" border: none;">
+            <td style="width: 33%; vertical-align: middle; padding: 10px;border: none;">
+                <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img>
+
             </td>
-        </tr>
 
-        <tr class="information">
-            <td colspan="2">
-                <table>
-                    <tr>
-                        <td>
-                            Sparksuite, Inc.<br />
-                            12345 Sunny Road<br />
-                            Sunnyville, CA 12345
-                        </td>
+            <td style="width: 33%; vertical-align: middle; text-align: left; padding: 10px;border: none;">
 
-                        <td>
-                            Acme Corp.<br />
-                            John Doe<br />
-                            john@example.com
-                        </td>
-                    </tr>
-                </table>
+                <div class="left">
+                    <p><strong th:text="${invoice.razonSocialEmisor}"></strong></p>
+                    <p th:text="'RFC: ' + ${invoice.cfdi.emisor.rfc}"></p>
+                    <p th:text="'RÉGIMEN: ' + ${data.get('regimenFiscal')}"></p>
+                    <p th:text="${invoice.direccionEmisor}"></p>
+                </div>
             </td>
-        </tr>
 
-        <tr class="heading">
-            <td>Payment Method</td>
-
-            <td>Check #</td>
-        </tr>
-
-        <tr class="details">
-            <td>Check</td>
-
-            <td>1000</td>
-        </tr>
-
-        <tr class="heading">
-            <td>CLAVE PROD SERV</td>
-            <td>CANTIDAD</td>
-            <td>UNIDAD</td>
-            <td>UNIDAD</td>
-            <td>DESCRIPCION</td>
-            <td>VALOR UNITARIO</td>
-            <td>IMPORTE</td>
-        </tr>
-
-        <tr th:each="concept: ${invoice.cfdi.conceptos}" class="item">
-            <td th:text="${concept.claveProdServ}" />
-            <td th:text="${concept.cantidad}" />
-            <td th:text="${concept.claveUnidad}" />
-            <td th:text="${concept.unidad}" />
-            <td th:text="${concept.descripcion}" />
-            <td th:text="${concept.valorUnitario}" />
-            <td th:text="${concept.importe}" />
-        </tr>
-
-        <tr class="item last">
-            <td colspan="5"></td>
-            <td>SUBTOTAL :</td>
-            <td><span th:text="${invoice.cfdi.subtotal}"> MXN</span></td>
-        </tr>
-
-        <tr class="total">
-            <td colspan="5"></td>
-            <td>TOTAL :</td>
-            <td><span th:text="${invoice.cfdi.total}"> MXN</span></td>
+            <td style="width: 33%; vertical-align: top; padding: 10px;border: none;">
+                <div class="right">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td colspan="2" class="text-center" style="background-color: #004b87; color: white;">
+                                <strong>RECIBO ELECTRÓNICO DE PAGO</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center" th:text="${invoice.cfdi.folio}"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center" style="background-color: #004b87; color: white;">
+                                <strong>FECHA DE EMISIÓN</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center"
+                                th:text="${#dates.format(invoice.fechaTimbrado, 'yyyy-MM-dd HH:mm:ss')}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center" style="background-color: #004b87; color: white;">
+                                <strong>FOLIO FISCAL</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center" style="font-size: 9px;" th:text="${invoice.uuid}">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
         </tr>
     </table>
-</div>
+
+    <table class="receptor-info">
+        <tr>
+            <td colspan="4" class="blue-header">INFORMACIÓN DEL RECEPTOR</td>
+        </tr>
+        <tr>
+            <td><strong>R.F.C.:</strong> <span th:text="${invoice.cfdi.receptor.rfc}"></span></td>
+            <td colspan="3"><strong>Razón social:</strong> <span th:text="${invoice.razonSocialRemitente}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="2"><strong>Uso CFDI:</strong> <span th:text="${data.get('usoCfdi')}"></span></td>
+            <td colspan="2"><strong>Regimen fiscal:</strong> <span
+                    th:text="${data.get('regimenFiscalReceptor')}"></span></td>
+        </tr>
+        <tr>
+            <td colspan="4"><strong>Dirección:</strong> <span th:text="${invoice.direccionReceptor}"></span></td>
+        </tr>
+    </table>
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>FECHA DE PAGO</th>
+                <th>FORMA DE PAGO</th>
+                <th>MONEDA</th>
+                <th>TIPO CAMBIO</th>
+                <th>MONTO PAGADO</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td th:text="${invoice.cfdi.complemento[1].pagos[0].fechaPago}">1</td>
+                <td th:text="${invoice.cfdi.complemento[1].pagos[0].tipoCambioP}">1</td>
+                <!-- <td th:text="${data.get('formaPagoComplemento')}"></td> -->
+                <td th:text="${invoice.cfdi.complemento[1].pagos[0].monedaP}">1</td>
+                <td th:text="${invoice.cfdi.complemento[1].pagos[0].tipoCambioP}">1</td>
+                <td th:text="${invoice.cfdi.complemento[1].pagos[0].monto}">1</td>
+
+
+            </tr>
+        </tbody>
+    </table>
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Id documento:</th>
+                <th>No. Parcialidad:</th>
+                <th>Moneda: </th>
+                <th>Saldo anterior: $</th>
+                <th>Importe pagado: $</th>
+                <th>Saldo insoluto: $</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="relacionados : ${invoice.cfdi.complemento[1].pagos[0].relacionados}">
+                <td class="text-right" th:text="${relacionados.idDocumento}">1</td>
+                <td th:text="${relacionados.numParcialidad}"></td>
+                <td th:text="${relacionados.monedaDR}"></td>
+                <td class="text-right"
+                    th:text="'$ ' + ${#numbers.formatDecimal(relacionados.impSaldoAnt, 1, 'COMMA', 2, 'POINT')}"></td>
+
+                <td class="text-right"
+                    th:text="'$ ' + ${#numbers.formatDecimal(relacionados.impPagado, 1, 'COMMA', 2, 'POINT')}">
+                </td>
+                <td class="text-right"
+                    th:text="'$ ' + ${#numbers.formatDecimal(relacionados.impSaldoInsoluto, 1, 'COMMA', 2, 'POINT')}">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="totals-section">
+
+        <div>
+            <span class="totals-label">TOTAL PAGADO:</span>
+            <span class="totals-amount"
+                th:text="'$ ' + ${#numbers.formatDecimal(invoice.cfdi.complemento[1].totales.montoTotalPagos, 1, 'COMMA', 2, 'POINT')}"></span>
+        </div>
+
+        <div>
+            <span class="totals-label">IMPORTE CON LETRA:</span>
+            <span class="totals-amount" th:text="'$ ' + ${invoice.totalDesc}"></span>
+        </div>
+    </div>
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>No. CSD EMISOR</th>
+                <th>No. CSD SAT</th>
+                <th>Descripción</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td th:text="${invoice.cfdi.noCertificado}">1</td>
+                <td th:text="${invoice.cfdi.complemento[0].noCertificadoSAT}"></td>
+                <td th:text="${#dates.format(invoice.fechaTimbrado, 'yyyy-MM-dd HH:mm:ss')}"></td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <table style="width: 100%; border-collapse: collapse; table-layout: fixed;  border: none; margin:0px; ">
+        <tr style=" border: none;">
+            <td style="width: 82%; vertical-align: top; padding: 0px;border: none;">
+                <div class="digital-stamps">
+                    <div class="stamps-content">
+                        <table>
+                            <tr>
+                                <td class="blue-header">SELLO DIGITAL DEL CFDI</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloCfd}"></td>
+                            </tr>
+                            <tr>
+                                <td class="blue-header">SELLO DEL SAT</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.selloSat}"></td>
+                            </tr>
+                            <tr>
+                                <td class="blue-header">CADENA ORIGINAL</td>
+                            </tr>
+                            <tr>
+                                <td style="font-size: 8px; word-break: break-all;" th:text="${invoice.cadenaOriginal}">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </td>
+
+            <td style="width: 18%; vertical-align: middle; padding: 0px;border: none;">
+                <div class="qr-codes">
+                    <img th:src="@{'data:image/png;base64,'+${invoice.qr}}" alt="QR Code" class="qr-code"></img>
+                </div>
+            </td>
+        </tr>
+    </table>
+
 </body>
+
 </html>

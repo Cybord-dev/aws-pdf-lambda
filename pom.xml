@@ -113,6 +113,7 @@
             <version>5.11.0-M2</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -160,7 +161,7 @@
                         <configuration>
                             <transformers>
                                 <transformer
-                                        implementation="com.github.edwgiz.maven_shade_plugin.log4j2_cache_transformer.PluginsCacheFileTransformer">
+                                    implementation="com.github.edwgiz.maven_shade_plugin.log4j2_cache_transformer.PluginsCacheFileTransformer">
                                 </transformer>
                             </transformers>
                         </configuration>
