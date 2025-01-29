@@ -1,0 +1,309 @@
+{
+  "id": 139717,
+  "version": "4.0",
+  "rfcEmisor": "SEM121126H56",
+  "rfcRemitente": "GGL231212CD4",
+  "razonSocialEmisor": "SERVICIOS ESPECIALIZADOS EN MEDICINA PROJET LAB MEX",
+  "lineaEmisor": "A",
+  "razonSocialRemitente": "GLC GARTNER LABORATORIO CLINICO",
+  "lineaRemitente": "CLIENTE",
+  "tipoDocumento": "Factura",
+  "solicitante": "factoras2020@gmail.com",
+  "folio": "202501020310030794",
+  "preFolio": "0125-00197",
+  "uuid": "61FCB5B6-4DC5-4D00-B1CC-52B0FFB33B69",
+  "statusFactura": 3,
+  "statusDetail": "",
+  "packFacturacion": "NTLINK",
+  "metodoPago": "PUE",
+  "formaPago": "03",
+  "impuestosRetenidos": 0,
+  "impuestosTrasladados": 8095.52,
+  "fechaCreacion": "2025-01-03T04:02:36",
+  "fechaActualizacion": "2025-01-03T10:15:52",
+  "fechaTimbrado": "2025-01-03T04:02:36",
+  "total": 58692.52,
+  "saldoPendiente": 0,
+  "validacionTeso": true,
+  "validacionOper": true,
+  "selloCfd": "NOCtOkEr5Zug54axMcnXV1XOQ9bOMPz+rO94lGt9M0moFO7JMkvrKnDcaAzx4ttnwldYO0B9BePVS8IZFFMA+TNzUVVd1tI/+HTXF+fMs8WcUDy5sGzUIk5np7mraETkdf2Lxyt4dk5i0yKWwAJj860yabwGZi3P0LeICOXhfL2VTiMvmHIueLxPErmVO8EppNK/G2uWzAt7rbGoD5rR5kS22FUNxk/G9JMQR00kMza8FWnWAr3UoBSpFdIIwNgnIg3sji8ZDmca80tpC/k1pvbxWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AIbnDrLlwlRN7SBEtG9GGg19xkqc/w==",
+  "qr": "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",
+  "cadenaOriginal": "||1.1|61FCB5B6-4DC5-4D00-B1CC-52B0FFB33B69|2025-01-03T10:02:51|NLC091211KC6|NOCtOkEr5Zug54axMcnXV1XOQ9bOMPz+rO94lGt9M0moFO7JMkvrKnDcaAzx4ttnwldYO0B9BePVS8IZFFMA+TNzUVVd1tI/+HTXF+fMs8WcUDy5sGzUIk5np7mraETkdf2Lxyt4dk5i0yKWwAJj860yabwGZi3P0LeICOXhfL2VTiMvmHIueLxPErmVO8EppNK/G2uWzAt7rbGoD5rR5kS22FUNxk/G9JMQR00kMza8FWnWAr3UoBSpFdIIwNgnIg3sji8ZDmca80tpC/k1pvbxWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AIbnDrLlwlRN7SBEtG9GGg19xkqc/w==|00001000000708142518||",
+  "totalDesc": "Cincuenta y Ocho Mil Seiscientos Noventa y Dos Pesos Cincuenta y Dos  Centavos",
+  "subTotalDesc": "Cincuenta Mil Quinientos Noventa y Siete Pesos Cero  Centavos",
+  "usoCfdiDesc": "Gastos en general",
+  "regimenFiscalDesc": "General de Ley Personas Morales",
+  "regimenFiscalReceptorDesc": "Régimen Simplificado de Confianza",
+  "formaPagoDesc": "Transferencia electrónica de fondos",
+  "metodoPagoDesc": "PAGO EN UNA SOLA EXHIBICION",
+  "direccionEmisor": "AVENIDA INSURGENTES SUR 686,801,BENITO JUAREZ,CIUDAD DE MEXICO,C.P. 03103",
+  "direccionReceptor": "SAN FAUSTINO 841,1,PEDREGAL DE SANTA ÚRSULA,COYOACÁN,CIUDAD DE MÉXICO,C.P. 04600",
+  "tipoDeComprobanteDesc": "Ingreso",
+  "cfdi": {
+    "version": "4.0",
+    "folio": "202501020310030794",
+    "fecha": "2025-01-03T10:02:36",
+    "sello": "NOCtOkEr5Zug54axMcnXV1XOQ9bOMPz+rO94lGt9M0moFO7JMkvrKnDcaAzx4ttnwldYO0B9BePVS8IZFFMA+TNzUVVd1tI/+HTXF+fMs8WcUDy5sGzUIk5np7mraETkdf2Lxyt4dk5i0yKWwAJj860yabwGZi3P0LeICOXhfL2VTiMvmHIueLxPErmVO8EppNK/G2uWzAt7rbGoD5rR5kS22FUNxk/G9JMQR00kMza8FWnWAr3UoBSpFdIIwNgnIg3sji8ZDmca80tpC/k1pvbxWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AIbnDrLlwlRN7SBEtG9GGg19xkqc/w==",
+    "formaPago": "03",
+    "metodoPago": "PUE",
+    "noCertificado": "00001000000506163643",
+    "certificado": "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",
+    "subtotal": 50597,
+    "total": 58692.52,
+    "moneda": "MXN",
+    "tipoCambio": 1,
+    "tipoDeComprobante": "I",
+    "exportacion": "01",
+    "lugarExpedicion": "03103",
+    "emisor": {
+      "rfc": "SEM121126H56",
+      "nombre": "SERVICIOS ESPECIALIZADOS EN MEDICINA PROJET LAB MEX",
+      "regimenFiscal": "601"
+    },
+    "receptor": {
+      "rfc": "GGL231212CD4",
+      "nombre": "GLC GARTNER LABORATORIO CLINICO",
+      "domicilioFiscalReceptor": "04600",
+      "regimenFiscalReceptor": "626",
+      "usoCfdi": "G03"
+    },
+    "conceptos": [
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "COLESTEROL LDL DIRECTO 1X60+1X20 80",
+        "valorUnitario": 6048,
+        "importe": 6048,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 6048,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 967.68
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "COLINESTERASA 1X40+1X10 50",
+        "valorUnitario": 3032,
+        "importe": 3032,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 3032,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 485.12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "FOISFATASA ALCALINA 1X160+1X40 200",
+        "valorUnitario": 3250,
+        "importe": 3250,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 3250,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 520
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "BA*400 COLESTEROL 10X60 600",
+        "valorUnitario": 4478,
+        "importe": 4478,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 4478,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 716.48
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "BA BILIRRUBINA TOTAL  8X60+8X15 600",
+        "valorUnitario": 3887,
+        "importe": 3887,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 3887,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 621.92
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "BA-400 HIERRO FERROZINA 4X60+4X15 300",
+        "valorUnitario": 5193,
+        "importe": 5193,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 5193,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 830.88
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "BA-200 PROTEINA ORINA  8X20 160",
+        "valorUnitario": 3638,
+        "importe": 3638,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 3638,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 582.08
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "BA-400 MAGNESIO 2X60+2X215 150",
+        "valorUnitario": 2230,
+        "importe": 2230,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 2230,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 356.8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "claveProdServ": "41116001",
+        "cantidad": 1,
+        "claveUnidad": "KT",
+        "unidad": "Kit",
+        "descripcion": "BA-400  HEMOGLOBINA A1C TURBI 1X60+1X121  72",
+        "valorUnitario": 18841,
+        "importe": 18841,
+        "objetoImp": "02",
+        "impuestos": [
+          {
+            "traslados": [
+              {
+                "base": 18841,
+                "impuesto": "002",
+                "tipoFactor": "Tasa",
+                "tasaOCuota": 0.16,
+                "importe": 3014.56
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "impuestos": [
+      {
+        "traslados": [
+          {
+            "base": 50597,
+            "impuesto": "002",
+            "tipoFactor": "Tasa",
+            "tasaOCuota": 0.16,
+            "importe": 8095.52
+          }
+        ],
+        "totalImpuestosTrasladados": 8095.52,
+        "totalImpuestosRetenidos": 0
+      }
+    ],
+    "complemento": [
+      {
+        "version": "1.1",
+        "uuid": "61FCB5B6-4DC5-4D00-B1CC-52B0FFB33B69",
+        "fechaTimbrado": "2025-01-03T10:02:51",
+        "selloCFD": "NOCtOkEr5Zug54axMcnXV1XOQ9bOMPz+rO94lGt9M0moFO7JMkvrKnDcaAzx4ttnwldYO0B9BePVS8IZFFMA+TNzUVVd1tI/+HTXF+fMs8WcUDy5sGzUIk5np7mraETkdf2Lxyt4dk5i0yKWwAJj860yabwGZi3P0LeICOXhfL2VTiMvmHIueLxPErmVO8EppNK/G2uWzAt7rbGoD5rR5kS22FUNxk/G9JMQR00kMza8FWnWAr3UoBSpFdIIwNgnIg3sji8ZDmca80tpC/k1pvbxWK6UAMC2B6GaYXHBF8A7MYADg2SEKcq+AIbnDrLlwlRN7SBEtG9GGg19xkqc/w==",
+        "rfcProvCertif": "NLC091211KC6",
+        "selloSAT": "dDSawHrKfDagLAgiSVgqCX5IwPezU1z49gyUTMy2C2J5ag4BQSs3UUKwVj1RiEpMcYxduwqlWriPwQ48yRcmPY8JhCem0Z9bqUQuk3F7hrOMCc4P+N4scfz/iFnEffTyGVoARMwMjXIxBE1tB1bVvTwh07D9XLruBirQcC2+rSz08966hHSqVQa+KMiC4smEDVaYekEe5yLLKA8QLQUcqpD3ZZkvGQ8ifKSLO7rGmB54nfsoVbtEvuoDVXg59pdRnx8HX1gsagJjl4GlFfxJ0rFz27h0Yw86YycTd7rMFkbTCofHhi753Kc9538UxJpszW7RhAf9fcLTp5R207cMVw==",
+        "noCertificadoSAT": "00001000000708142518"
+      }
+    ],
+    "addenda": []
+  },
+  "selloSat": "dDSawHrKfDagLAgiSVgqCX5IwPezU1z49gyUTMy2C2J5ag4BQSs3UUKwVj1RiEpMcYxduwqlWriPwQ48yRcmPY8JhCem0Z9bqUQuk3F7hrOMCc4P+N4scfz/iFnEffTyGVoARMwMjXIxBE1tB1bVvTwh07D9XLruBirQcC2+rSz08966hHSqVQa+KMiC4smEDVaYekEe5yLLKA8QLQUcqpD3ZZkvGQ8ifKSLO7rGmB54nfsoVbtEvuoDVXg59pdRnx8HX1gsagJjl4GlFfxJ0rFz27h0Yw86YycTd7rMFkbTCofHhi753Kc9538UxJpszW7RhAf9fcLTp5R207cMVw==",
+  "pagos": []
+}
