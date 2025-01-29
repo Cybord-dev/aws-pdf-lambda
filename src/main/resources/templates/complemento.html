@@ -8,7 +8,7 @@
     </meta>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </meta>
-    <title>Factura</title>
+    <title>Complemento de pago</title>
     <style>
         @page {
             size: A4;
@@ -172,7 +172,9 @@
                 <div class="left">
                     <p><strong th:text="${invoice.razonSocialEmisor}"></strong></p>
                     <p th:text="'RFC: ' + ${invoice.cfdi.emisor.rfc}"></p>
-                    <p th:text="'RÉGIMEN: ' + ${data.get('regimenFiscal')}"></p>
+                    <p
+                        th:text="'RÉGIMEN: ' + ${invoice.cfdi.emisor.regimenFiscal} + ' ' + ${regimenFiscalMap.get(invoice.cfdi.emisor.regimenFiscal)}">
+                    </p>
                     <p th:text="${invoice.direccionEmisor}"></p>
                 </div>
             </td>
@@ -222,9 +224,11 @@
             <td colspan="3"><strong>Razón social:</strong> <span th:text="${invoice.razonSocialRemitente}"></span></td>
         </tr>
         <tr>
-            <td colspan="2"><strong>Uso CFDI:</strong> <span th:text="${data.get('usoCfdi')}"></span></td>
+            <td colspan="2"><strong>Uso CFDI:</strong> <span
+                    th:text="${usoCfdiMap.get(invoice.cfdi.receptor.usoCfdi)}"></span></td>
             <td colspan="2"><strong>Regimen fiscal:</strong> <span
-                    th:text="${data.get('regimenFiscalReceptor')}"></span></td>
+                    th:text="  ${invoice.cfdi.receptor.regimenFiscalReceptor} + ' ' + ${regimenFiscalMap.get(invoice.cfdi.receptor.regimenFiscalReceptor)}"></span>
+            </td>
         </tr>
         <tr>
             <td colspan="4"><strong>Dirección:</strong> <span th:text="${invoice.direccionReceptor}"></span></td>
@@ -244,7 +248,7 @@
         <tbody>
             <tr>
                 <td th:text="${invoice.cfdi.complemento[1].pagos[0].fechaPago}">1</td>
-                <td th:text="${invoice.cfdi.complemento[1].pagos[0].tipoCambioP}">1</td>
+                <td th:text="${formaPagoMap.get(invoice.cfdi.complemento[1].pagos[0].formaDePagoP)}">1</td>
                 <!-- <td th:text="${data.get('formaPagoComplemento')}"></td> -->
                 <td th:text="${invoice.cfdi.complemento[1].pagos[0].monedaP}">1</td>
                 <td th:text="${invoice.cfdi.complemento[1].pagos[0].tipoCambioP}">1</td>

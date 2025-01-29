@@ -18,22 +18,33 @@ class PDFBuilderTest {
     private final PDFBuilder pdfBuilder = new PDFBuilder();
     private final CsvService csvService = new CsvService();
 
-    
- @Test
+    @Test
     void testCsvReaderLambda_withValidCsvFile() throws IOException {
 
-        Map<String, String> data = csvService.processAllCsvFromResources();
-        var firstRow = data.get("MXN");
+        Map<String, String> monedaMap = csvService.getMonedaMap();
+        var firstRow = monedaMap.get("MXN");
         assertEquals("Peso Mexicano", firstRow);
     }
+
     @Test
     public void generateInvoicePdfTest() throws IOException {
         FacturaCustom invoice = objMapper.readValue(new File("./src/test/resources/json/fact2.json"),
                 FacturaCustom.class);
-        Map<String, Object> data = csvService.setData(invoice);
+        Map<String, String> monedaMap = csvService.getMonedaMap();
+        Map<String, String> metodoPagoMap = csvService.getMetodoPagoMap();
+        Map<String, String> formaPagoMap = csvService.getFormaPagoMap();
+        Map<String, String> usoCfdiMap = csvService.getUsoCfdiMap();
+        Map<String, String> tipoDeComprobanteMap = csvService.getTipoDeComprobanteMap();
+        Map<String, String> regimenFiscalMap = csvService.getRegimenFiscalMap();
+
         Context ctx = new Context();
         ctx.setVariable("invoice", invoice);
-        ctx.setVariable("data", data);
+        ctx.setVariable("monedaMap", monedaMap);
+        ctx.setVariable("metodoPagoMap", metodoPagoMap);
+        ctx.setVariable("formaPagoMap", formaPagoMap);
+        ctx.setVariable("usoCfdiMap", usoCfdiMap);
+        ctx.setVariable("tipoDeComprobanteMap", tipoDeComprobanteMap);
+        ctx.setVariable("regimenFiscalMap", regimenFiscalMap);
         writeFileToDisk("./src/test/resources/pdf/pue.pdf", pdfBuilder.buildPdf(ctx, "factura"));
     }
 
@@ -42,12 +53,22 @@ class PDFBuilderTest {
 
         FacturaCustom invoice = objMapper.readValue(new File("./src/test/resources/json/complement.json"),
                 FacturaCustom.class);
-                Map<String, Object> data = csvService.setData(invoice);
+        Map<String, String> monedaMap = csvService.getMonedaMap();
+        Map<String, String> metodoPagoMap = csvService.getMetodoPagoMap();
+        Map<String, String> formaPagoMap = csvService.getFormaPagoMap();
+        Map<String, String> usoCfdiMap = csvService.getUsoCfdiMap();
+        Map<String, String> tipoDeComprobanteMap = csvService.getTipoDeComprobanteMap();
+        Map<String, String> regimenFiscalMap = csvService.getRegimenFiscalMap();
 
+        // Crear el contexto y agregar los mapas
         Context ctx = new Context();
-        ctx.setVariable("data", data);
-
         ctx.setVariable("invoice", invoice);
+        ctx.setVariable("monedaMap", monedaMap);
+        ctx.setVariable("metodoPagoMap", metodoPagoMap);
+        ctx.setVariable("formaPagoMap", formaPagoMap);
+        ctx.setVariable("usoCfdiMap", usoCfdiMap);
+        ctx.setVariable("tipoDeComprobanteMap", tipoDeComprobanteMap);
+        ctx.setVariable("regimenFiscalMap", regimenFiscalMap);
         writeFileToDisk("./src/test/resources/pdf/complement.pdf", pdfBuilder.buildPdf(ctx, "complemento"));
     }
 
